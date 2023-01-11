@@ -2,7 +2,7 @@
 set -e
 
 while IFS= read -r LINE; do
-	FIRST=$(echo "$LINE | cut -c 1)
+	FIRST=$(echo "$LINE" | cut -c 1)
 	echo "$FIRST-line: $LINE"
 done < $1
 exit 0
