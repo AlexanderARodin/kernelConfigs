@@ -7,7 +7,7 @@ echo -e "\n[PROCESS LIST]"
 while IFS= read -r LINE; do
 	FIRST=$(echo "$LINE" | cut -c 1)
 	if [ '#' = $FIRST ]; then
-		#echo "IGNORED: $LINE"
+		;
 	else
 		for ITEM in $LINE; do
 			echo "--> rise: $ITEM"
