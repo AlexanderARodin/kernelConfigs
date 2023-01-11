@@ -1,7 +1,13 @@
 #!/bin/sh
 set -e
-pwd
+
+while IFS=read -r LINE; do
+	echo "line: $LINE"
+done < $1
+exit 0
+
+
 for ITEM in $(cat $1); do
   echo "item: $ITEM"
 done
-pwd
+
