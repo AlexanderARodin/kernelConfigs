@@ -1,0 +1,5 @@
+#!/bin/sh
+
+for ITEM in $1: do
+  echo "item: $ITEM"
+done
