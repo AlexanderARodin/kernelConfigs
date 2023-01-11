@@ -4,15 +4,11 @@ set -e
 while IFS= read -r LINE; do
 	FIRST=$(echo "$LINE" | cut -c 1)
 	if [ '#' = $FIRST ]; then
-		echo "ignor: $LINE"
+		echo "IGNORED: $LINE"
 	else
 		echo "$FIRST-line: $LINE"
+		for ITEM in $LINE; do
+			echo "item: $ITEM"
+		done
 	fi
 done < $1
-exit 0
-
-
-for ITEM in $(cat $1); do
-  echo "item: $ITEM"
-done
-
