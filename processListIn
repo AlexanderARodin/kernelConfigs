@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
 
-for ITEM in $1: do
+for ITEM in $1; do
   echo "item: $ITEM"
 done
