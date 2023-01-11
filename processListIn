@@ -3,7 +3,7 @@ set -e
 
 make tinyconfig
 
-echo -e "\n[PROCESS LIST]"
+echo "\n[PROCESS LIST]"
 while IFS= read -r LINE; do
 	FIRST=$(echo "$LINE" | cut -c 1)
 	if [ '#' = $FIRST ]; then
