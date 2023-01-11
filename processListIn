@@ -1,8 +1,9 @@
 #!/bin/sh
 set -e
 
-while IFS= read -r line; do
-	echo "line: $line"
+while IFS= read -r LINE; do
+	FIRST=$(echo "$LINE | cut -c 1)
+	echo "$FIRST-line: $LINE"
 done < $1
 exit 0
 
