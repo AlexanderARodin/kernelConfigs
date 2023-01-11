@@ -11,6 +11,7 @@ while IFS= read -r LINE; do
 	else
 		for ITEM in $LINE; do
 			echo "--> rise: $ITEM"
+			./scripts/config -e $ITEM
 		done
 	fi
 done < $1
