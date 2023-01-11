@@ -6,9 +6,8 @@ while IFS= read -r LINE; do
 	if [ '#' = $FIRST ]; then
 		echo "IGNORED: $LINE"
 	else
-		echo "$FIRST-line: $LINE"
 		for ITEM in $LINE; do
-			echo "item: $ITEM"
+			echo "--> rise: $ITEM"
 		done
 	fi
 done < $1
