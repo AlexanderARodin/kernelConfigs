@@ -7,7 +7,7 @@ make tinyconfig
 echo "\n[PROCESS LIST]"
 while IFS= read -r LINE; do
 	FIRST=$(echo "$LINE" | cut -c 1)
-	if [ '' = $FIRST]; then
+	if [ 'x' = "x$FIRST"]; then
 		true
 	else
 		if [ '#' = $FIRST ]; then
