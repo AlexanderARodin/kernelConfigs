@@ -14,7 +14,7 @@ while IFS= read -r LINE; do
 			true
 		else
 			if [ '-' = $FIRST ]; then
-				echo "--> apply: -$LINE"
+				echo "--> apply: $LINE"
 				./scripts/config $LINE
 			fi
 		fi
