@@ -9,9 +9,13 @@ while IFS= read -r LINE; do
 	if [ '#' = $FIRST ]; then
 		true
 	else
-		for ITEM in $LINE; do
-			echo "--> rise: $ITEM"
-			./scripts/config -e $ITEM
-		done
+		echo "--> apply: -$LINE"
+		./scripts/config $LINE
+#
+#		for ITEM in $LINE; do
+#			echo "--> rise: $ITEM"
+#			./scripts/config -e $ITEM
+#		done
+#
 	fi
 done < $1
