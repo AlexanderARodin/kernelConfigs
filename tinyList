@@ -1,4 +1,4 @@
-#CONFIG_DEFAULT_HOSTNAME='<raaNux>'
+--set-str '<raaNux>' DEFAULT_HOSTNAME
 -e PRINTK
 -e TTY
 -e 64BIT
