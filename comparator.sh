@@ -1,9 +1,10 @@
 #!/bin/sh
 set -e
 
-PARSER=""
+PARSER=$1
+FILE_1=$2
 
-for KEY in $(cat ./fullKeyList); do
+for KEY in $(cat ./kernelConfigs/fullKeyList); do
   echo $KEY
-  ./scripts/config -s $KEY --file "$1"
+  "$PARSER" -s $KEY --file "$FILE_1"
 done 
