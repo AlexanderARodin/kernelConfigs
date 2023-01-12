@@ -8,6 +8,6 @@ for KEY in $(cat ../kernelConfigs/fullKeyList); do
   echo
   echo $KEY
   echo "f: $FILE_1"
-  "$PARSER" -s $KEY --file "$FILE_1"
+  "$PARSER" --file "$FILE_1" -s $KEY
   echo
 done 
