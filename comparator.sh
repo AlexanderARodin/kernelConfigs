@@ -8,5 +8,5 @@ FILE_2=$2
 for KEY in $(cat ../kernelConfigs/fullKeyList); do
   RES1=$("$PARSER" --file "$FILE_1" -s $KEY)
   RES2=$("$PARSER" --file "$FILE_2" -s $KEY)
-  echo -e "$RES1 \t$RES2 \t <--$KEY"
+  echo "$RES1 \t$RES2 \t <--$KEY"
 done 
