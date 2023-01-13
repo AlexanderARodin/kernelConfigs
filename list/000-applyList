@@ -9,14 +9,29 @@
 
 # initrd
 -e BLK_DEV_INITRD
-#-e DEVTMPFS
-#-e DEVTMPFS_MOUNT
 
 # suppornt executing scripts (/init) and ordinary binary (ELF)
 -e BINFMT_SCRIPT
 -e BINFMT_ELF
 
 
+# not used
+-d KEYBOARD_ATKBD
+-d MOUSE_PS2
+
+-d UNIX98_PTYS
+-d LEGACY_PTYS
+
+-d HID
+
+
+#-e DEVTMPFS
+#-e DEVTMPFS_MOUNT
+
+
 #-e BLOCK
 #-e MODULES
 #-e POSIX_TIMERS
+
+# V I R T I O
+# VIRTIO_CONSOLE
