@@ -8,7 +8,7 @@ function perform_task {
 }
 
 echo -e "\n[PROCESS LIST]"
-0 | while IFS= read -r LINE; do
+&0 | while IFS= read -r LINE; do
 	if [ 'x' = "x$LINE" ]; then
 		true
 	else
