@@ -2,7 +2,7 @@
 -e 64BIT
 -e WERROR
 
-# MAIN kernel should 'speak'
+# MAIN kernel should speak
 -e TTY
 -e PRINTK
 -e PRINTK_TIME
