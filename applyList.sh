@@ -1,8 +1,11 @@
 #!/bin/sh
 set -e
 
-make tinyconfig
+function perform_task {
 
+	echo "--> apply: $LINE"
+#	./scripts/config $LINE
+}
 
 echo "\n[PROCESS LIST]"
 while IFS= read -r LINE; do
@@ -14,8 +17,7 @@ while IFS= read -r LINE; do
 			true
 		else
 			if [ '-' = $FIRST ]; then
-				echo "--> apply: $LINE"
-				./scripts/config $LINE
+				perfom_task
 			fi
 		fi
 	fi
