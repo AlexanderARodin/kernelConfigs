@@ -21,4 +21,4 @@ while IFS= read -r LINE; do
 			fi
 		fi
 	fi
-done < $1
+done < &0
