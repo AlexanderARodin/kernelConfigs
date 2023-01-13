@@ -1,5 +1,6 @@
 --set-str DEFAULT_HOSTNAME '<raaNux>'
 -e 64BIT
+-e WERROR
 
 # MAIN kernel should 'speak'
 -e PRINTK
