@@ -17,7 +17,7 @@ while IFS= read -r LINE; do
 			true
 		else
 			if [ '-' = $FIRST ]; then
-				perfom_task
+				perform_task
 			fi
 		fi
 	fi
