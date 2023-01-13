@@ -9,8 +9,8 @@
 
 # initrd
 -e BLK_DEV_INITRD
--e DEVTMPFS
--e DEVTMPFS_MOUNT
+#-e DEVTMPFS
+#-e DEVTMPFS_MOUNT
 
 # suppornt executing scripts (/init) and ordinary binary (ELF)
 -e BINFMT_SCRIPT
