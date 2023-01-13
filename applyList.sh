@@ -7,7 +7,7 @@ function perform_task {
 #	./scripts/config $LINE
 }
 
-echo "\n[PROCESS LIST]"
+echo -e "\n[PROCESS LIST]"
 while IFS= read -r LINE; do
 	if [ 'x' = "x$LINE" ]; then
 		true
