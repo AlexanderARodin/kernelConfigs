@@ -12,8 +12,9 @@
 -e DEVTMPFS
 -e DEVTMPFS_MOUNT
 
-# suppornt executing script /init
-#-e BINFMT_SCRIPT
+# suppornt executing scripts (/init) and ordinary binary (ELF)
+-e BINFMT_SCRIPT
+-e BINFMT_ELF
 
 
 #-e BLOCK
