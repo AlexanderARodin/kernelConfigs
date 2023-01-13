@@ -1,14 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
-function perform_task {
-
-	echo "--> apply: $LINE"
-#	./scripts/config $LINE
-}
-
-echo -e "\n[PROCESS LIST]"
-&0 | while IFS= read -r LINE; do
+echo "\n[PROCESS LIST]"
+while IFS= read -r LINE; do
 	if [ 'x' = "x$LINE" ]; then
 		true
 	else
@@ -17,8 +11,9 @@ echo -e "\n[PROCESS LIST]"
 			true
 		else
 			if [ '-' = $FIRST ]; then
-				perform_task
+				echo "--> apply: $LINE"
+				#./scripts/config $LINE
 			fi
 		fi
 	fi
-done
+done < $1
