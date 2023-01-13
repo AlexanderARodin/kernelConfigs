@@ -13,6 +13,7 @@ $ENUM < "$LISTDIR/$1-applyList" | \
 		RESULT=$( ./scripts/config -s $LINE )
 		if [ 'undef' = $RESULT ]; then
       	UNDEF_LIST="$UNDEF_LIST $LINE"
+			echo "-------"
 		fi
 		echo "$RESULT\t<--$LINE"
 	done
