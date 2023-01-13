@@ -1,1 +1,1 @@
-grep -v "^#" | grep "-e"
+cat | grep -v "^#" | grep "-e"
