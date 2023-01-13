@@ -4,3 +4,4 @@
 # kernel should 'speak'
 -e PRINTK
 -e TTY
+-e BGGG
