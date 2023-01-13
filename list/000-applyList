@@ -13,7 +13,7 @@
 -e DEVTMPFS_MOUNT
 
 # suppornt executing script /init
-BINFMT_SCRIPT
+-e BINFMT_SCRIPT
 
 
 #-e BLOCK
