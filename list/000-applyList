@@ -8,6 +8,7 @@
 # initrd
 BLK_DEV_INITRD
 DEVTMPFS
+DEVTMPFS_MOUNT
 
 
 
