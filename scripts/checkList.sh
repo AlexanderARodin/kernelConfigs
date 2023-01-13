@@ -11,7 +11,7 @@ LISTDIR="../kernelConfigs/list"
 $ENUM < "$LISTDIR/$1-applyList" | \
 	while read LINE; do
 		RESULT=$( ./scripts/config -s $LINE )
-     	UNDEF_LIST="UUUUU"
+     	$UNDEF_LIST="UUUUU"
 		if [ 'undef' = $RESULT ]; then
       	UNDEF_LIST="$UNDEF_LIST $LINE"
 			echo "-------"
