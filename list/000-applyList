@@ -6,3 +6,8 @@
 -e TTY
 
 # initrd
+BLK_DEV_INITRD
+
+
+
+#-e POSIX_TIMERS
