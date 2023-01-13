@@ -1,9 +1,8 @@
 --set-str DEFAULT_HOSTNAME '<raaNux>'
 -e 64BIT
 
--e OTHERSEZ
-
 # kernel should 'speak'
 -e PRINTK
 -e TTY
--e BGGG
+
+# initrd
