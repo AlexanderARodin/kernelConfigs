@@ -1,6 +1,5 @@
 #!/bin/sh
 set -e
-set -x
 
 function perform_task {
 
