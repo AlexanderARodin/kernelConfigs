@@ -9,7 +9,10 @@ LISTDIR="../kernelConfigs/list"
 $ENUM < "$LISTDIR/$1-applyList" | \
 	while read LINE; do
 		RESULT=$( ./scripts/config -s $LINE )
-    if [ 'undef' = $RESULT ]; then
-      ;echo "--> apply: $LINE"
-		echo "--> apply: $LINE"
+		if [ 'undef' = $RESULT ]; then
+      	echo "UNDEF\t<--$LINE"
+			exit 1
+		else
+			echo "$RESULT\t<--$LINE"
+		fi
 	done
