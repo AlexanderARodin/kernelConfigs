@@ -3,7 +3,7 @@ set -e
 
 cd ./linux-5.15.85
 
-UNDEF_LIST=""
+UNDEF_LIST="E: "
 
 ENUM="../kernelConfigs/scripts/enum-keys.sh"
 LISTDIR="../kernelConfigs/list"
