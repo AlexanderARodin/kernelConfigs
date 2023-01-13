@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-ENUM="./kernelConfigs/enum.sh"
+ENUM="./kernelConfigs/scripts/enum.sh"
 LISTDIR="./kernelConfigs/list"
 
 $ENUM < "$LISTDIR/$1"
