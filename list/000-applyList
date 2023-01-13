@@ -12,6 +12,6 @@ BLK_DEV_INITRD
 
 
 
-
+#-e BLOCK
 #-e MODULES
 #-e POSIX_TIMERS
