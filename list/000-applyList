@@ -7,6 +7,7 @@
 
 # initrd
 BLK_DEV_INITRD
+DEVTMPFS
 
 
 
