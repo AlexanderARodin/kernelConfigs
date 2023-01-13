@@ -4,7 +4,9 @@ set -e
 ENUM="./kernelConfigs/scripts/enum.sh"
 LISTDIR="./kernelConfigs/list"
 
-$ENUM < "$LISTDIR/$1"
+$ENUM < "$LISTDIR/$1" | while read LINE; do
+	echo "--> $LINE"
+done
 
 exit 0
 
