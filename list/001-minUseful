@@ -5,6 +5,7 @@
 # /DEV
 -e DEVTMPFS
 -e DEVTMPFS_MOUNT
+# still cant mount DEVPTS - seems need some support options
 
 
 
