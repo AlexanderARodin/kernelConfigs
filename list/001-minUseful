@@ -1,6 +1,13 @@
 # DEV-SYS-PROC
+&&&&&&&&&&&&&&&&&
+not work...
 -e DEVTMPFS
 -e DEVTMPFS_MOUNT
+&&&&&&&&&&&&&&&&&
+
+
+
+
 -e PROC_FS
 -e SYSFS
 
