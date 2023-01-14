@@ -2,11 +2,12 @@
 -e PROC_FS
 -e SYSFS
 
- 
-# UDEV
-##-e SIGNALFD
+# /DEV
 #-e DEVTMPFS
 #-e DEVTMPFS_MOUNT
+
+
+
 
 -- clocksource......tsc
 
