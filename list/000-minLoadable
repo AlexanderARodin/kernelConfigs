@@ -3,11 +3,14 @@
 -e WERROR
 
 # MAIN kernel should speak
--e TTY
 -e PRINTK
 -e PRINTK_TIME
+-e TTY
+-d UNIX98_PTYS
+-d LEGACY_PTYS
 
-# initrd
+
+# INITRD
 -e BLK_DEV_INITRD
 
 # suppornt executing scripts (/init) and ordinary binary (ELF)
@@ -15,14 +18,8 @@
 -e BINFMT_ELF
 
 
-# not used
--d KEYBOARD_ATKBD
--d MOUSE_PS2
 
--d UNIX98_PTYS
--d LEGACY_PTYS
 
--d HID
 
 
 #-e DEVTMPFS
