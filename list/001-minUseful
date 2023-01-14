@@ -3,6 +3,7 @@
 -e SYSFS
 
 # UDEV
+-e SIGNALFD
 #-e DEVTMPFS
 #-e DEVTMPFS_MOUNT
 
