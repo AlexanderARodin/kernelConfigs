@@ -1,15 +1,14 @@
-# DEV-SYS-PROC
-&&&&&&&&&&&&&&&&&
-not work...
--e DEVTMPFS
--e DEVTMPFS_MOUNT
-&&&&&&&&&&&&&&&&&
-
-
-
-
+# PROC-SYS
 -e PROC_FS
 -e SYSFS
+
+# UDEV
+#-e DEVTMPFS
+#-e DEVTMPFS_MOUNT
+
+
+
+
 
 # MODULE
 -e MODULES
