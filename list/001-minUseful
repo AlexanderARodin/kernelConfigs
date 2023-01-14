@@ -3,13 +3,13 @@
 -e SYSFS
 
 # /DEV
-#-e DEVTMPFS
-#-e DEVTMPFS_MOUNT
+-e DEVTMPFS
+-e DEVTMPFS_MOUNT
 
 
 
 
--- clocksource......tsc
+#-- clocksource......tsc
 
 
 
