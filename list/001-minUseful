@@ -2,10 +2,15 @@
 -e PROC_FS
 -e SYSFS
 
-# modules
+# MODULE
 -e MODULES
 -e MODULE_UNLOAD
 -e MODULE_FORCE_UNLOAD
+
+# modules
+-m SERIO_SERPORT
+-m HID
+
 
 
 
