@@ -1,4 +1,6 @@
-# SYSTEMS
+# DEV-SYS-PROC
+-e DEVTMPFS
+-e DEVTMPFS_MOUNT
 -e PROC_FS
 -e SYSFS
 
@@ -15,8 +17,6 @@
 
 
 
-#-e DEVTMPFS
-#-e DEVTMPFS_MOUNT
 
 
 #-e BLOCK
