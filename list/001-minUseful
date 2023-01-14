@@ -4,6 +4,9 @@
 
 # modules
 -e MODULES
+-e MODULE_UNLOAD
+-e MODULE_FORCE_UNLOAD
+
 
 
 
