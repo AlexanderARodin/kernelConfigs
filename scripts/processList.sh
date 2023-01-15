@@ -14,6 +14,12 @@ else
 	exit 1
 fi
 
+echo "LIST CONTENT: $2"
+for item in $2; do
+	echo "item = $item"
+done
+
+exit 0
 
 $ENUM < "$LISTDIR/$2" | \
 	while read LINE; do
