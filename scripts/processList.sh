@@ -27,4 +27,4 @@ $ENUM < "$LISTDIR/$2" | \
 		fi
 	done
 	
-#
+
