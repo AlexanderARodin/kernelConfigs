@@ -14,14 +14,19 @@ else
 	exit 1
 fi
 
-echo "LIST CONTENT: $2"
+FILES=$2
+if [ '*' = "$FILES" ]; then
+	FILES=$( ls "$LISTDIR" )
+fi
+
+echo "LIST CONTENT: $FILES"
 for item in $2; do
 	echo "item = $item"
 done
 
 exit 0
 
-$ENUM < "$LISTDIR/$2" | \
+$ENUM < "$LISTDIR/$FILES" | \
 	while read LINE; do
 		if [ '--apply' = $1 ]; then
 			echo "--> apply: $LINE"
