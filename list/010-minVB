@@ -1,4 +1,5 @@
 # CPU
+# smpboot: CPU0: Intel(R) Xeon(R) E-2176M CPU @ 2.70GHz (family: 0x6, model: 0x9e, stepping: 0xa)
 -e SMP
 --set-val NR_CPUS 4
 
@@ -11,10 +12,18 @@
 #-e PARAVIRT_TIME_ACCOUNTING
 
 
+# tsc: Fast TSC calibration failed
+# Spectre V2
+# RETBleed: Warning...... leaks possible
+# SRBDS: Unknown: Dependent on hypervisor status
+# Perfomance Events: unsupported p6 CPU model 158 no PMU driver, software events only.
+# intel_pstate: CPU model not supported
+
+
 #-- clocksource......tsc
 # --- pts??
-# -- crng ??
 
+# -- 'crng init done' ??
 
 
 
