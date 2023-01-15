@@ -1,6 +1,6 @@
 # CPU
 -e SMP
---set-val NR_CPU 4
+--set-val NR_CPUS 4
 
 
 
