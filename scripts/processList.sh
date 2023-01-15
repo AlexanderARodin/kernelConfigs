@@ -15,7 +15,7 @@ else
 fi
 
 FILES=$2
-if [ '*' = "$FILES" ]; then
+if [ '--all' = "$FILES" ]; then
 	FILES=$( ls "$LISTDIR" )
 fi
 
