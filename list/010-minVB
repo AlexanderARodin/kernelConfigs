@@ -13,6 +13,9 @@
 
 
 # tsc: Fast TSC calibration failed
+# tsc: Unable to calibrate against PIT
+# tsc: No reference (HPET/PMTIMER) available
+tsc: Markin TSC unstable due to could not calculate TSC khz
 # Spectre V2
 # RETBleed: Warning...... leaks possible
 # SRBDS: Unknown: Dependent on hypervisor status
