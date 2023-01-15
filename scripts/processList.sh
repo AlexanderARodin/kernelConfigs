@@ -22,20 +22,18 @@ fi
 echo "LIST CONTENT: $FILES"
 for item in $FILES; do
 	echo "item = $item"
+	$ENUM < "$LISTDIR/$item" | \
+		while read LINE; do
+			if [ '--apply' = $1 ]; then
+				echo "--> apply: $LINE"
+				./scripts/config $LINE
+			else
+				RESULT=$( ./scripts/config -s $LINE )
+				echo "$RESULT\t<--$LINE"
+			fi
+		done
 done
 
-exit 0
 
-$ENUM < "$LISTDIR/$FILES" | \
-	while read LINE; do
-		if [ '--apply' = $1 ]; then
-			echo "--> apply: $LINE"
-			./scripts/config $LINE
-		else
-			RESULT=$( ./scripts/config -s $LINE )
-			echo "$RESULT\t<--$LINE"
-		fi
-	done
-	
 
 #
