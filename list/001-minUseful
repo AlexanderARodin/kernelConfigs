@@ -8,14 +8,6 @@
 # still cant mount DEVPTS - seems need some support options
 
 
-
-
-#-- clocksource......tsc
-
-
-
-
-
 # MODULE
 -e MODULES
 -e MODULE_UNLOAD
@@ -24,20 +16,4 @@
 # modules
 -m SERIO_SERPORT
 -m HID
-
-
-
-
-
-
-
-#-e BLOCK
-
-#-e POSIX_TIMERS
-
-# V I R T I O
-# VIRTIO_CONSOLE
-# VIRTIO_MENU
-
-# VIRT_DRIVERS
 
