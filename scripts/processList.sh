@@ -15,7 +15,7 @@ else
 	exit 1
 fi
 
-
+exit 0
 $ENUM < "$LISTDIR/$2" | \
 	while read LINE; do
 		if [ '--apply' = $1 ]; then
