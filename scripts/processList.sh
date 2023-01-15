@@ -20,7 +20,7 @@ if [ '--all' = "$FILES" ]; then
 fi
 
 for item in $FILES; do
-	echo "LISTFILE = $item"
+	#echo "LISTFILE = $item"
 	$ENUM < "$LISTDIR/$item" | \
 		while read LINE; do
 			if [ '--apply' = $1 ]; then
