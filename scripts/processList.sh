@@ -16,6 +16,7 @@ else
 fi
 
 exit 0
+
 $ENUM < "$LISTDIR/$2" | \
 	while read LINE; do
 		if [ '--apply' = $1 ]; then
@@ -28,3 +29,4 @@ $ENUM < "$LISTDIR/$2" | \
 	done
 	
 
+#
