@@ -8,7 +8,7 @@ cd ./linux-5.15.85
 LISTDIR="../kernelConfigs/list"
 if [ '--apply' = $1 ]; then
 	ENUM="../kernelConfigs/scripts/enum.sh"
-elif [ '--check' = $1 ];
+elif [ '--check' = $1 ]; then
 	ENUM="../kernelConfigs/scripts/enum-keys.sh"
 else
 	echo "unsupported command: $1" > 2
