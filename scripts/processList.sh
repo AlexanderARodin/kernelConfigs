@@ -1,27 +1,30 @@
 #!/bin/sh
 set -e
 
+if
+
 cd ./linux-5.15.85
 
-ENUM="../kernelConfigs/scripts/enum.sh"
 LISTDIR="../kernelConfigs/list"
+if [ '--apply' = $1 ]; then
+	ENUM="../kernelConfigs/scripts/enum.sh"
+elif [ '--check' = $1 ];
+	ENUM="../kernelConfigs/scripts/enum-keys.sh"
+else
+	echo "unsupported command: $1" > 2
+	exit 1
+fi
 
-$ENUM < "$LISTDIR/$1" | \
+
+$ENUM < "$LISTDIR/$2" | \
 	while read LINE; do
-		echo "--> apply: $LINE"
-		./scripts/config $LINE
+		if [ '--apply' = $1 ]; then
+			echo "--> apply: $LINE"
+			./scripts/config $LINE
+		else
+			RESULT=$( ./scripts/config -s $LINE )
+			echo "$RESULT\t<--$LINE"
+		fi
 	done
-  
-  
-  
-  
-cd ./linux-5.15.85
-
-ENUM="../kernelConfigs/scripts/enum-keys.sh"
-LISTDIR="../kernelConfigs/list"
-
-$ENUM < "$LISTDIR/$1" | \
-	while read LINE; do
-		RESULT=$( ./scripts/config -s $LINE )
-		echo "$RESULT\t<--$LINE"
-	done
+	
+#
