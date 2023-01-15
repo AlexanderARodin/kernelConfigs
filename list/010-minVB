@@ -1,5 +1,14 @@
+# CPU
+-e SMP
+--set-val NR_CPU 4
 
 
+
+# GUEST under HYPERVISOR
+#-e HYPERVISOR_GUEST
+#-e PARAVIRT
+#-e PARAVIRT_SPINLOCKS
+#-e PARAVIRT_TIME_ACCOUNTING
 
 
 #-- clocksource......tsc
