@@ -19,9 +19,8 @@ if [ '--all' = "$FILES" ]; then
 	FILES=$( ls "$LISTDIR" )
 fi
 
-echo "LIST CONTENT: $FILES"
 for item in $FILES; do
-	echo "item = $item"
+	echo "LISTFILE = $item"
 	$ENUM < "$LISTDIR/$item" | \
 		while read LINE; do
 			if [ '--apply' = $1 ]; then
