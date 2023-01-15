@@ -20,7 +20,7 @@ if [ '--all' = "$FILES" ]; then
 fi
 
 echo "LIST CONTENT: $FILES"
-for item in $2; do
+for item in $FILES; do
 	echo "item = $item"
 done
 
