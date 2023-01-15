@@ -1,12 +1,11 @@
 #!/bin/sh
 set -e
 
-if
 
 cd ./linux-5.15.85
 
 LISTDIR="../kernelConfigs/list"
-if [ '--apply' = $1 ]; then
+if   [ '--apply' = $1 ]; then
 	ENUM="../kernelConfigs/scripts/enum.sh"
 elif [ '--check' = $1 ]; then
 	ENUM="../kernelConfigs/scripts/enum-keys.sh"
@@ -15,7 +14,6 @@ else
 	exit 1
 fi
 
-exit 0
 
 $ENUM < "$LISTDIR/$2" | \
 	while read LINE; do
