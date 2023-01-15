@@ -14,10 +14,6 @@
 
 
 
-# tsc: Fast TSC calibration failed
-# tsc: Unable to calibrate against PIT
-# tsc: No reference (HPET/PMTIMER) available
-tsc: Markin TSC unstable due to could not calculate TSC khz
 # Spectre V2
 # RETBleed: Warning...... leaks possible
 # SRBDS: Unknown: Dependent on hypervisor status
@@ -28,8 +24,6 @@ tsc: Markin TSC unstable due to could not calculate TSC khz
 
 # input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input2
 # -- 'crng init done' ??
-
-#-- clocksource......tsc
 # --- pts??
 
 
