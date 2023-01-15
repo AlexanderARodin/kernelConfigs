@@ -1,0 +1,23 @@
+
+
+
+
+#-- clocksource......tsc
+
+
+
+
+
+
+
+
+#-e BLOCK
+
+#-e POSIX_TIMERS
+
+# V I R T I O
+# VIRTIO_CONSOLE
+# VIRTIO_MENU
+
+# VIRT_DRIVERS
+
