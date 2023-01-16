@@ -12,6 +12,15 @@
 -e PARAVIRT_TIME_ACCOUNTING
 
 
+# Input devices
+-e input_mousedev
+-e userio
+-d serio_serport
+-e input_tablet
+
+
+
+
 
 # Graphics
 --set-val CONSOLE_COLUMNS 128
@@ -20,6 +29,8 @@
 -e FB_VGA16
 -e FB_VESA
 -e FRAMEBUFFER_CONSOLE
+-e FRAMEBUFFER_CONSOLE_DETECT_PRIMARY
+-e FRAMEBUFFER_CONSOLE_ROTATION
 
 
 
