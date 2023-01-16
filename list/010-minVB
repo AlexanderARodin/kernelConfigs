@@ -23,8 +23,8 @@
 
 
 # Graphics
---set-val CONSOLE_COLUMNS 128
---set-val CONSOLE_ROWS 48
+--set-val DUMMY_CONSOLE_COLUMNS 128
+--set-val DUMMY_CONSOLE_ROWS 48
 -e FB
 -e FB_VGA16
 -e FB_VESA
