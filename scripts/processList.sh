@@ -1,8 +1,10 @@
 #!/bin/sh
 set -e
 
+# probably needs to be in ENV
+KERNEL_SRC="./linux-5.15.85"
 
-cd ./linux-5.15.85
+cd $KERNEL_SRC
 
 LISTDIR="../kernelConfigs/list"
 if   [ '--apply' = $1 ]; then
