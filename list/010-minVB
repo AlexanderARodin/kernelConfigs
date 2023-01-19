@@ -3,20 +3,20 @@
 -e SMP
 --set-val NR_CPUS 4
 
-
-
 # GUEST under HYPERVISOR
 -e HYPERVISOR_GUEST
 -e PARAVIRT
 -e PARAVIRT_SPINLOCKS
 -e PARAVIRT_TIME_ACCOUNTING
 
-
 # Input devices
 -e input_mousedev
 -e userio
 -d serio_serport
 -e input_tablet
+
+
+# bus
 
 
 
