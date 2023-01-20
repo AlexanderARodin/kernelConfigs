@@ -19,11 +19,15 @@
 # bus
 -e PCI
 
+# block etc
+-e BLOCK
+
+
 # V I R T I O
--e virtio_menu
--e virtio_pci
--e net
--e virtio_net
+#-e virtio_menu
+#-e virtio_pci
+#-e net
+#-e virtio_net
 #-e VIRTIO_CONSOLE
 
 
@@ -65,7 +69,6 @@
 
 
 
-#-e BLOCK
 
 #-e POSIX_TIMERS
 
