@@ -19,10 +19,15 @@
 # bus
 -e PCI
 
+# V I R T I O
+-e VIRTIO_CONSOLE
+# VIRTIO_MENU
+
+
 
 # Graphics
 -d vga_arb
--e drm
+#-e drm
 #-e drm_vboxvideo
 
 --set-val DUMMY_CONSOLE_COLUMNS 128
@@ -33,6 +38,10 @@
 #-e FRAMEBUFFER_CONSOLE
 #-e FRAMEBUFFER_CONSOLE_DETECT_PRIMARY
 #-e FRAMEBUFFER_CONSOLE_ROTATION
+
+
+
+
 
 
 
@@ -57,9 +66,6 @@
 
 #-e POSIX_TIMERS
 
-# V I R T I O
-# VIRTIO_CONSOLE
-# VIRTIO_MENU
 
 # VIRT_DRIVERS
 
