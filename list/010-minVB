@@ -20,8 +20,9 @@
 -e PCI
 
 # V I R T I O
--e VIRTIO_CONSOLE
-# VIRTIO_MENU
+-e virtio_menu
+-e virtio_pci
+#-e VIRTIO_CONSOLE
 
 
 
