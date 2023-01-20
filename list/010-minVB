@@ -1,3 +1,7 @@
+### testing
+-e legacy_vsyscall_none
+
+
 # CPU
 # smpboot: CPU0: Intel(R) Xeon(R) E-2176M CPU @ 2.70GHz (family: 0x6, model: 0x9e, stepping: 0xa)
 -e SMP
