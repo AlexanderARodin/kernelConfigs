@@ -9,29 +9,27 @@
 -e PARAVIRT_SPINLOCKS
 -e PARAVIRT_TIME_ACCOUNTING
 
+# BUS
+-e pci
+-e VIRTIO_menu
+-e VIRTIO_pci
+
+# block etc
+-e block
+-e scsi
+#-e scsi_VIRTIO
+
+
+# V I R T I O
+#-e net
+#-e VIRTIO_net
+#-e VIRTIO_CONSOLE
+
 # Input devices
 -e input_mousedev
 -e userio
 -d serio_serport
 -e input_tablet
-
-
-# bus
--e pci
-
-# block etc
--e block
--e scsi
-#-e scsi_virtio
-
-
-# V I R T I O
--e virtio_menu
--e virtio_pci
-#-e net
-#-e virtio_net
-#-e VIRTIO_CONSOLE
-
 
 
 # Graphics
