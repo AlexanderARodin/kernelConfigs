@@ -22,6 +22,7 @@
 # block etc
 -e block
 -e scsi
+-e scsi-virtio
 
 
 # V I R T I O
