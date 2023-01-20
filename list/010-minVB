@@ -17,10 +17,11 @@
 
 
 # bus
--e PCI
+-e pci
 
 # block etc
--e BLOCK
+-e block
+-e scsi
 
 
 # V I R T I O
