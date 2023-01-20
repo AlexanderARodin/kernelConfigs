@@ -25,8 +25,8 @@
 
 
 # V I R T I O
-#-e virtio_menu
-#-e virtio_pci
+-e virtio_menu
+-e virtio_pci
 #-e net
 #-e virtio_net
 #-e VIRTIO_CONSOLE
