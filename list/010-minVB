@@ -63,6 +63,9 @@
 -e misc_filesystems
 -e vboxsf_fs
 
+#-e virtio_blk
+
+
 # V I R T I O
 #-e net
 #-e VIRTIO_net
@@ -91,6 +94,8 @@
 
 
 
+#-e POSIX_TIMERS
+
 
 
 # Spectre V2
@@ -102,9 +107,3 @@
 
 # seems not to be a problem
 # random: crng init done
-
-
-#-e POSIX_TIMERS
-
-# VIRT_DRIVERS
-
