@@ -1,8 +1,8 @@
 ### testing
 -e legacy_vsyscall_none
 
--e i2c_scmi
--e i2c_virtio
+#-e i2c_scmi
+#-e i2c_virtio
 
 # MOTHER
 -e DMI
@@ -46,7 +46,7 @@
 # Graphics
 -d vga_arb
 -e drm
-#-e drm_vboxvideo
+-e drm_vboxvideo
 
 --set-val DUMMY_CONSOLE_COLUMNS 128
 --set-val DUMMY_CONSOLE_ROWS 48
