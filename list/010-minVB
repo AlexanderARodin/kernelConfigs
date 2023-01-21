@@ -8,7 +8,7 @@
 -e DMI
 -e ACPI
 -d acpi_ac
--d acpi_buttery
+-d acpi_battery
 -d acpi_fan
 -d acpi_thermal
 
