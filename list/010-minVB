@@ -5,6 +5,8 @@
 #-e i2c_virtio
 
 -e usb_support
+-e usb
+-e usb_xhci_hcd
 
 
 # MOTHER
