@@ -4,9 +4,6 @@
 #-e i2c_scmi
 #-e i2c_virtio
 
--e blk_dev_sd
--e blk_dev_sr
-
 
 # MOTHER
 -e DMI
@@ -46,6 +43,9 @@
 -e block
 -e scsi
 -e scsi_VIRTIO
+-e blk_dev_sd
+-e blk_dev_sr
+
 
 # file systems
 -e ext2_fs
