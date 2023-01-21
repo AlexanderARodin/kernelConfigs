@@ -33,6 +33,9 @@
 -e block
 -e scsi
 -e scsi_VIRTIO
+-e ext2_fs
+-e ext4_fs
+-e ext4_fs_posix_acl
 
 
 # V I R T I O
