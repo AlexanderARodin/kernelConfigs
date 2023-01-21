@@ -5,7 +5,7 @@
 #-e i2c_virtio
 
 -e isa_bus
--e pci_cnb2ole_quirk
+-e pci_cnb20le_quirk
 
 
 
