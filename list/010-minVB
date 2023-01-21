@@ -1,5 +1,6 @@
 ### testing
 -e legacy_vsyscall_none
+-e i2c_virtio
 
 # MOTHER
 -e DMI
