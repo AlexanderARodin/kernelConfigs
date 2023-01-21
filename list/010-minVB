@@ -25,7 +25,7 @@
 # block etc
 -e block
 -e scsi
-#-e scsi_VIRTIO
+-e scsi_VIRTIO
 
 
 # V I R T I O
