@@ -1,7 +1,8 @@
 ### testing
 -e legacy_vsyscall_none
 
--e acpi_pci_slot
+
+#-e acpi_pci_slot
 #-e isa_bus
 #-e pci_cnb20le_quirk
 
@@ -78,7 +79,7 @@
 # Graphics
 -d vga_arb
 -e drm
--e drm_vboxvideo
+#-e drm_vboxvideo
 
 --set-val DUMMY_CONSOLE_COLUMNS 128
 --set-val DUMMY_CONSOLE_ROWS 48
@@ -93,28 +94,18 @@
 
 
 
-
-
 # Spectre V2
 # RETBleed: Warning...... leaks possible
 # Perfomance Events: unsupported p6 CPU model 158 no PMU driver, software events only.
 # intel_pstate: CPU model not supported
 
-
-
-# input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input2
 # --- pts??
-
-
 
 # seems not to be a problem
 # random: crng init done
 
 
-
-
 #-e POSIX_TIMERS
-
 
 # VIRT_DRIVERS
 
