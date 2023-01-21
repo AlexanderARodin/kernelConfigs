@@ -7,6 +7,10 @@
 # MOTHER
 -e DMI
 -e ACPI
+-d acpi_ac
+-d acpi_buttery
+-d acpi_fan
+-d acpi_thermal
 
 
 # CPU
