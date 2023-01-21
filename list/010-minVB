@@ -4,6 +4,11 @@
 #-e i2c_scmi
 #-e i2c_virtio
 
+-e isa_bus
+-e pci_cnb2ole_quirk
+
+
+
 
 # MOTHER
 -e DMI
