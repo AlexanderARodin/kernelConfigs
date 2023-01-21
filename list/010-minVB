@@ -4,6 +4,9 @@
 #-e i2c_scmi
 #-e i2c_virtio
 
+-e usb_support
+
+
 # MOTHER
 -e DMI
 -e ACPI
