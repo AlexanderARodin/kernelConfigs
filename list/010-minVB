@@ -33,10 +33,14 @@
 -e block
 -e scsi
 -e scsi_VIRTIO
+
+# file systems
 -e ext2_fs
 -e ext4_fs
 -e ext4_fs_posix_acl
-
+-e iso9660_fs
+-e joliet
+-e zisofs
 
 # V I R T I O
 #-e net
