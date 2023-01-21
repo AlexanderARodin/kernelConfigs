@@ -4,10 +4,6 @@
 #-e i2c_scmi
 #-e i2c_virtio
 
--e usb_support
--e usb
--e usb_xhci_hcd
-
 
 # MOTHER
 -e DMI
@@ -35,6 +31,13 @@
 -e pci
 -e VIRTIO_menu
 -e VIRTIO_pci
+
+# USB
+-e USB_support
+-e USB
+-e USB_xhci_hcd
+
+
 
 # block etc
 -e block
