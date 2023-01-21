@@ -23,6 +23,8 @@
 -e PARAVIRT
 -e PARAVIRT_SPINLOCKS
 -e PARAVIRT_TIME_ACCOUNTING
+-e virt_drivers
+-e vboxguest
 
 # BUS
 -e pci
@@ -41,6 +43,8 @@
 -e iso9660_fs
 -e joliet
 -e zisofs
+-e misc_filesystems
+-e vboxsf_fs
 
 # V I R T I O
 #-e net
