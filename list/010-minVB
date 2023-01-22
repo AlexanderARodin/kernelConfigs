@@ -1,5 +1,7 @@
 ### testing
 -e legacy_vsyscall_none
+-d ETHTOOL_NETLINK
+#-e VIRTIO_CONSOLE
 
 #-e irq_poll
 #-e acpi_pci_slot
@@ -7,20 +9,7 @@
 #-e pci_cnb20le_quirk
 #-e i2c_scmi
 #-e i2c_virtio
-
-# networking
--e net
--d wireless
--d ETHTOOL_NETLINK
-
--e netdevices
--e VIRTIO_net
--d wlan
--d usb_net_drivers
--d ethernet
-
-#-e VIRTIO_CONSOLE
-
+#-e POSIX_TIMERS
 
 
 # MOTHER
@@ -56,7 +45,6 @@
 -e USB_xhci_hcd
 
 
-
 # block etc
 -e block
 -e scsi
@@ -74,8 +62,16 @@
 -e zisofs
 -e misc_filesystems
 -e vboxsf_fs
-
 #-e virtio_blk
+
+# networking
+-e net
+-d wireless
+-e netdevices
+-e VIRTIO_net
+-d wlan
+-d usb_net_drivers
+-d ethernet
 
 
 # Input devices
@@ -98,10 +94,6 @@
 #-e FRAMEBUFFER_CONSOLE
 #-e FRAMEBUFFER_CONSOLE_DETECT_PRIMARY
 #-e FRAMEBUFFER_CONSOLE_ROTATION
-
-
-
-#-e POSIX_TIMERS
 
 
 
