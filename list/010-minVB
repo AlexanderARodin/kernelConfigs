@@ -10,6 +10,7 @@
 
 # networking
 -e net
+-d wireless
 #-e VIRTIO_net
 #-e VIRTIO_CONSOLE
 
