@@ -8,6 +8,10 @@
 #-e i2c_scmi
 #-e i2c_virtio
 
+# networking
+-e net
+#-e VIRTIO_net
+#-e VIRTIO_CONSOLE
 
 
 
@@ -65,11 +69,6 @@
 
 #-e virtio_blk
 
-
-# V I R T I O
-#-e net
-#-e VIRTIO_net
-#-e VIRTIO_CONSOLE
 
 # Input devices
 -e input_mousedev
