@@ -11,7 +11,7 @@
 # networking
 -e net
 -d wireless
-#-d ETHTOOL_NETLINK
+-d ETHTOOL_NETLINK
 
 -e scsi_bnx2_iscsi
 #-e VIRTIO_net
