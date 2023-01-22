@@ -15,6 +15,8 @@
 
 -e scsi_bnx2_iscsi
 -d wlan
+-d net_drivers
+
 #-e VIRTIO_net
 #-e VIRTIO_CONSOLE
 
