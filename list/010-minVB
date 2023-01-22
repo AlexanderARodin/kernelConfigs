@@ -11,6 +11,7 @@
 # networking
 -e net
 -d wireless
+-d ETHTOOL_NETLINK
 #-e VIRTIO_net
 #-e VIRTIO_CONSOLE
 
