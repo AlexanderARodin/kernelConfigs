@@ -13,7 +13,7 @@
 -d wireless
 -d ETHTOOL_NETLINK
 
--e scsi_bnx2_iscsi
+#-e scsi_bnx2_iscsi
 -d wlan
 -d usb_net_drivers
 -d ethernet
