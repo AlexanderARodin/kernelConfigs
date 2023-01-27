@@ -4,6 +4,9 @@
 
 -e media_support
 -e media_pci_support
+-d radio_adapters
+-e rc_core
+
 
 
 #-e VIRTIO_CONSOLE
