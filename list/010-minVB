@@ -6,6 +6,7 @@
 -e media_pci_support
 -d radio_adapters
 -e rc_core
+-d rc_map
 -e video_bt848
 
 
