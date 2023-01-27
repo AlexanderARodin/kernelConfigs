@@ -1,6 +1,11 @@
 ### testing
 -e legacy_vsyscall_none
 -d ETHTOOL_NETLINK
+
+-e media_support
+-e media_pci_support
+
+
 #-e VIRTIO_CONSOLE
 
 #-e irq_poll
