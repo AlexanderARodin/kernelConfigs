@@ -8,6 +8,7 @@
 -e rc_core
 -d rc_map
 -e video_bt848
+#-e dvb_bt8xx
 
 
 
