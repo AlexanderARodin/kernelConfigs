@@ -40,6 +40,7 @@
 # SATA ISA
 -e lpc_ich
 -e ata
+-e sata_ahci
 
 
 # USB
