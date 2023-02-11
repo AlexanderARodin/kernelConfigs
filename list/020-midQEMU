@@ -1,6 +1,5 @@
 ### testing
 
--e lpc_ich
 
 #-e legacy_vsyscall_none
 #-e POSIX_TIMERS
@@ -37,6 +36,10 @@
 -e hw_random_virtio
 -e virtio_input
 -e virtio_blk
+
+# SATA ISA
+-e lpc_ich
+-e ata
 
 
 # USB
