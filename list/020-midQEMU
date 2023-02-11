@@ -13,19 +13,19 @@
 
 # VIRTIO
 -e virtio_input
-
-# USB
-#-e USB_support
-#-e USB
-#-e USB_xhci_hcd
+#-e scsi_VIRTIO
 
 
 # block etc
 #-e block
 #-e scsi
-#-e scsi_VIRTIO
 #-e blk_dev_sd
 #-e blk_dev_sr
+
+# USB
+#-e USB_support
+#-e USB
+#-e USB_xhci_hcd
 
 
 # file systems
