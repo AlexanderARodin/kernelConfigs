@@ -11,7 +11,7 @@
 #-e i2c_scmi
 #-e i2c_virtio
 
-
+# VIRTIO
 -e virtio_input
 
 # USB
