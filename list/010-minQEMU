@@ -41,6 +41,16 @@
 -e PARAVIRT_TIME_ACCOUNTING
 -e virtio_input
 
+# networking
+-e net
+-e inet
+-d wireless
+#-e netdevices
+-e VIRTIO_net
+-d wlan
+-d usb_net_drivers
+-d ethernet
+
 # USB
 #-e USB_support
 #-e USB
@@ -66,16 +76,6 @@
 #-e zisofs
 #-e misc_filesystems
 #-e vboxsf_fs
-
-# networking
--e net
--e inet
--d wireless
-#-e netdevices
--e VIRTIO_net
--d wlan
--d usb_net_drivers
--d ethernet
 
 
 # Input devices
