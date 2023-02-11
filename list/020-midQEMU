@@ -13,14 +13,15 @@
 
 # VIRTIO
 -e virtio_input
+
+# VIRTIO BLOCK
 -e block
 -e scsi
+-e blk_dev_sd
+-e blk_dev_sr
 -e scsi_VIRTIO
 
 
-# block etc
-#-e blk_dev_sd
-#-e blk_dev_sr
 
 # USB
 #-e USB_support
