@@ -47,7 +47,7 @@
 
 
 # Graphics
-#-d vga_arb
+-d vga_arb
 -e drm
 -e drm_bochs
 
