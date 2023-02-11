@@ -47,9 +47,9 @@
 
 
 # Graphics
-#-d vga_arb
+-d vga_arb
 -e drm
-#-e drm_bochs
+-e drm_bochs
 
 --set-val DUMMY_CONSOLE_COLUMNS 128
 --set-val DUMMY_CONSOLE_ROWS 48
