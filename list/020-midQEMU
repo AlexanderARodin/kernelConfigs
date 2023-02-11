@@ -1,4 +1,7 @@
 ### testing
+
+-e lpc_ich
+
 #-e legacy_vsyscall_none
 #-e POSIX_TIMERS
 #-e random_trust_bootloader
