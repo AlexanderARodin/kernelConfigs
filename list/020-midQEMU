@@ -30,7 +30,7 @@
 
 # append VIRTIO
 -e virtio_input
-#-e virtio_blk
+-e virtio_blk
 
 
 # USB
