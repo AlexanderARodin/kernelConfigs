@@ -39,7 +39,7 @@
 -e PARAVIRT
 -e PARAVIRT_SPINLOCKS
 -e PARAVIRT_TIME_ACCOUNTING
-#-e virt_drivers
+-e virtio_input
 
 # USB
 #-e USB_support
