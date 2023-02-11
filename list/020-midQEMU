@@ -1,6 +1,7 @@
 ### testing
 #-e legacy_vsyscall_none
 #-e POSIX_TIMERS
+-e rando_trust_bootloader
 
 
 #-e VIRTIO_CONSOLE
