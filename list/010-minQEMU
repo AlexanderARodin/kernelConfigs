@@ -70,6 +70,7 @@
 
 # networking
 -e net
+-e inet
 -d wireless
 #-e netdevices
 -e VIRTIO_net
