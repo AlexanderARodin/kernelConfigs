@@ -30,6 +30,7 @@
 
 # file systems
 #-e virtio_blk
+#-e cifs
 
 #-e ext2_fs
 #-e ext4_fs
@@ -37,8 +38,6 @@
 #-e iso9660_fs
 #-e joliet
 #-e zisofs
-#-e misc_filesystems
-#-e vboxsf_fs
 
 # Graphics
 #-d vga_arb
