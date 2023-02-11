@@ -30,6 +30,8 @@
 -e zisofs
 
 # append VIRTIO
+-e hw_random
+-e hw_random_virtio
 -e virtio_input
 -e virtio_blk
 
