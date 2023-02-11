@@ -11,8 +11,6 @@
 #-e i2c_scmi
 #-e i2c_virtio
 
-# VIRTIO
--e virtio_input
 
 # VIRTIO BLOCK
 -e block
@@ -21,6 +19,18 @@
 -e blk_dev_sr
 -e scsi_VIRTIO
 
+# file systems
+#-e cifs
+#-e ext2_fs
+#-e ext4_fs
+#-e ext4_fs_posix_acl
+#-e iso9660_fs
+#-e joliet
+#-e zisofs
+
+# append VIRTIO
+-e virtio_input
+#-e virtio_blk
 
 
 # USB
@@ -29,16 +39,6 @@
 #-e USB_xhci_hcd
 
 
-# file systems
-#-e virtio_blk
-#-e cifs
-
-#-e ext2_fs
-#-e ext4_fs
-#-e ext4_fs_posix_acl
-#-e iso9660_fs
-#-e joliet
-#-e zisofs
 
 # Graphics
 #-d vga_arb
