@@ -32,8 +32,6 @@
 # append VIRTIO
 -e virtio_input
 -e virtio_blk
--e hw_random
--e hw_random_virtio
 
 
 # USB
