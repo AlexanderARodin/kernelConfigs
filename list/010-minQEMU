@@ -44,9 +44,9 @@
 # networking
 -e net
 -e inet
--d wireless
-#-e netdevices
+-e netdevices
 -e VIRTIO_net
+-d wireless
 -d wlan
 -d usb_net_drivers
 -d ethernet
