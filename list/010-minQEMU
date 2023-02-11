@@ -11,6 +11,10 @@
 #-e i2c_scmi
 #-e i2c_virtio
 
+# CPU
+# smpboot: CPU0: Intel 06/9e (family: 0x6, model: 0x9e, stepping: 0xd)
+-e SMP
+--set-val NR_CPUS 4
 
 # MOTHER
 -e DMI
@@ -20,11 +24,11 @@
 -d acpi_fan
 -d acpi_thermal
 
+# BUS
+-e pci
+#-e VIRTIO_menu
+#-e VIRTIO_pci
 
-# CPU
-# smpboot: CPU0: Intel 06/9e (family: 0x6, model: 0x9e, stepping: 0xd)
--e SMP
---set-val NR_CPUS 4
 
 # GUEST under HYPERVISOR
 #-e HYPERVISOR_GUEST
@@ -32,11 +36,6 @@
 #-e PARAVIRT_SPINLOCKS
 #-e PARAVIRT_TIME_ACCOUNTING
 #-e virt_drivers
-
-# BUS
-#-e pci
-#-e VIRTIO_menu
-#-e VIRTIO_pci
 
 # USB
 #-e USB_support
