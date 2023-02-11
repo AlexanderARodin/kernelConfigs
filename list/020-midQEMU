@@ -1,7 +1,7 @@
 ### testing
 #-e legacy_vsyscall_none
 #-e POSIX_TIMERS
--e random_trust_bootloader
+#-e random_trust_bootloader
 
 
 #-e VIRTIO_CONSOLE
@@ -32,6 +32,7 @@
 # append VIRTIO
 -e virtio_input
 -e virtio_blk
+-e hw_random_virtio
 
 
 # USB
