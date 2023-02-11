@@ -1,4 +1,4 @@
-# PROC-SYS
+# kernel FS
 -e PROC_FS
 -e SYSFS
 
