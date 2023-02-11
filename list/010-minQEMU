@@ -26,8 +26,8 @@
 
 # BUS
 -e pci
-#-e VIRTIO_menu
-#-e VIRTIO_pci
+-e VIRTIO_menu
+-e VIRTIO_pci
 
 
 # GUEST under HYPERVISOR
