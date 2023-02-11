@@ -13,12 +13,12 @@
 
 # VIRTIO
 -e virtio_input
-#-e scsi_VIRTIO
+-e scsi
+-e scsi_VIRTIO
 
 
 # block etc
 #-e block
-#-e scsi
 #-e blk_dev_sd
 #-e blk_dev_sr
 
