@@ -1,0 +1,101 @@
+### testing
+#-e legacy_vsyscall_none
+
+
+#-e VIRTIO_CONSOLE
+#-e irq_poll
+#-e acpi_pci_slot
+#-e isa_bus
+#-e pci_cnb20le_quirk
+#-e i2c_scmi
+#-e i2c_virtio
+#-e POSIX_TIMERS
+
+
+# MOTHER
+#-e DMI
+#-e ACPI
+#-d acpi_ac
+#-d acpi_battery
+#-d acpi_fan
+#-d acpi_thermal
+
+
+# CPU
+# smpboot: CPU0: Intel(R) Xeon(R) E-2176M CPU @ 2.70GHz (family: 0x6, model: 0x9e, stepping: 0xa)
+-e SMP
+--set-val NR_CPUS 4
+
+# GUEST under HYPERVISOR
+#-e HYPERVISOR_GUEST
+#-e PARAVIRT
+#-e PARAVIRT_SPINLOCKS
+#-e PARAVIRT_TIME_ACCOUNTING
+#-e virt_drivers
+
+# BUS
+#-e pci
+#-e VIRTIO_menu
+#-e VIRTIO_pci
+
+# USB
+#-e USB_support
+#-e USB
+#-e USB_xhci_hcd
+
+
+# block etc
+#-e block
+#-e scsi
+#-e scsi_VIRTIO
+#-e blk_dev_sd
+#-e blk_dev_sr
+
+
+# file systems
+#-e virtio_blk
+
+#-e ext2_fs
+#-e ext4_fs
+#-e ext4_fs_posix_acl
+#-e iso9660_fs
+#-e joliet
+#-e zisofs
+#-e misc_filesystems
+#-e vboxsf_fs
+
+# networking
+#-e net
+-d wireless
+#-e netdevices
+#-e VIRTIO_net
+-d wlan
+-d usb_net_drivers
+-d ethernet
+
+
+# Input devices
+-e input_mousedev
+-e userio
+-d serio_serport
+-e input_tablet
+
+
+# Graphics
+#-d vga_arb
+#-e drm
+
+--set-val DUMMY_CONSOLE_COLUMNS 128
+--set-val DUMMY_CONSOLE_ROWS 48
+#-e FB
+#-e FB_VGA16
+#-e FB_VESA
+#-e FRAMEBUFFER_CONSOLE
+#-e FRAMEBUFFER_CONSOLE_DETECT_PRIMARY
+#-e FRAMEBUFFER_CONSOLE_ROTATION
+
+
+
+# RETBleed: Warning...... leaks possible
+# --- pts??
+# random: crng init done
