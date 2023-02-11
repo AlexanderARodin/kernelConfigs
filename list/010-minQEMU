@@ -69,10 +69,10 @@
 #-e vboxsf_fs
 
 # networking
-#-e net
+-e net
 -d wireless
 #-e netdevices
-#-e VIRTIO_net
+-e VIRTIO_net
 -d wlan
 -d usb_net_drivers
 -d ethernet
