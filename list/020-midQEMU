@@ -20,13 +20,13 @@
 -e scsi_VIRTIO
 
 # file systems
-#-e cifs
-#-e ext2_fs
-#-e ext4_fs
-#-e ext4_fs_posix_acl
-#-e iso9660_fs
-#-e joliet
-#-e zisofs
+-e cifs
+-e ext2_fs
+-e ext4_fs
+-e ext4_fs_posix_acl
+-e iso9660_fs
+-e joliet
+-e zisofs
 
 # append VIRTIO
 -e virtio_input
