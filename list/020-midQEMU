@@ -37,10 +37,11 @@
 -e virtio_input
 -e virtio_blk
 
-# SATA ISA
+# SATA ISA SERIAL
 -e lpc_ich
 -e ata
 -e sata_ahci
+-e i2c_i801
 
 
 # USB
