@@ -6,7 +6,7 @@
 #-e random_trust_bootloader
 
 
-#-e VIRTIO_CONSOLE
+-e VIRTIO_CONSOLE
 #-e irq_poll
 #-e acpi_pci_slot
 #-e isa_bus
@@ -43,14 +43,6 @@
 -e sata_ahci
 -e i2c_i801
 
-
-# USB
-#-e USB_support
-#-e USB
-#-e USB_xhci_hcd
-
-
-
 # Graphics
 -d vga_arb
 -e drm
@@ -66,7 +58,11 @@
 #-e FRAMEBUFFER_CONSOLE_ROTATION
 
 
+# USB
+#-e USB_support
+#-e USB
+#-e USB_xhci_hcd
+
 
 # RETBleed: Warning...... leaks possible
 # --- pts??
-# random: crng init done
