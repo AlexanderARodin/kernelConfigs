@@ -28,6 +28,7 @@
 -e PARAVIRT_TIME_ACCOUNTING
 
 # networking
+-e POSIX_TIMERS
 -e net
 -e inet
 -e netdevices
