@@ -9,6 +9,7 @@
 -e scsi
 -e blk_dev_sd
 -e blk_dev_sr
+-e chr_dev_sg
 -e scsi_VIRTIO
 
 # file systems
