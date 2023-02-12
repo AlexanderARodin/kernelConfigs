@@ -1,6 +1,5 @@
 ### testing
 #-e legacy_vsyscall_none
-#-e POSIX_TIMERS
 #-e random_trust_bootloader
 #-e i2c_virtio
 
