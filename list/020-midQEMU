@@ -1,17 +1,7 @@
 ### testing
-
-
 #-e legacy_vsyscall_none
 #-e POSIX_TIMERS
 #-e random_trust_bootloader
-
-
--e VIRTIO_CONSOLE
-#-e irq_poll
-#-e acpi_pci_slot
-#-e isa_bus
-#-e pci_cnb20le_quirk
-#-e i2c_scmi
 #-e i2c_virtio
 
 
@@ -34,8 +24,14 @@
 # append VIRTIO
 -e hw_random
 -e hw_random_virtio
+-d hw_random_intel
+-d hw_random_amd
+-d hw_random_via
+
+-e VIRTIO_CONSOLE
 -e virtio_input
 -e virtio_blk
+
 
 # SATA ISA SERIAL
 -e lpc_ich
