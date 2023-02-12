@@ -3,6 +3,7 @@
 --set-val NR_CPUS 4
 
 # MOTHER
+-e rtc_class
 -e DMI
 -e ACPI
 -d acpi_ac
