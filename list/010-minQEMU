@@ -30,6 +30,7 @@
 
 # networking
 -e POSIX_TIMERS
+-m IPV6
 -e net
 -e inet
 -e netdevices
