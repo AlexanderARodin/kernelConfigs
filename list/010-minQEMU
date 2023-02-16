@@ -40,7 +40,8 @@
 -d ethernet
 
 # Input devices
--e input_mousedev
--e userio
+-m input_mousedev
+-m mouse_ps2
+-m userio
 -d serio_serport
 -e input_tablet
