@@ -22,7 +22,7 @@
 
 # file systems
 -e unicode
--e cifs
+-m cifs
 -e ext2_fs
 -e ext4_fs
 -e ext4_fs_posix_acl
