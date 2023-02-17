@@ -6,7 +6,7 @@
 -e rtc_class
 -e DMI
 -e ACPI
--m ACPI_BUTTON
+-e ACPI_BUTTON
 -d acpi_ac
 -d acpi_battery
 -d acpi_fan
@@ -35,7 +35,7 @@
 -e net
 -e inet
 -e netdevices
--m VIRTIO_net
+-e VIRTIO_net
 -d wireless
 -d wlan
 -d usb_net_drivers
