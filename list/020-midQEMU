@@ -13,6 +13,7 @@
 -e scsi_VIRTIO
 
 # file systems
+-e unicode
 -e cifs
 -e ext2_fs
 -e ext4_fs
