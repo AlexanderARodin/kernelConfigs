@@ -17,6 +17,7 @@
 -e ext2_fs
 -e ext4_fs
 -e ext4_fs_posix_acl
+-e nls_utf8
 -e vfat_fs
 -e exfat_fs
 -e iso9660_fs
