@@ -18,7 +18,7 @@
 -e VIRTIO_pci
 
 # 9p support
--e NET_9P
+-m NET_9P
 -e NET_9P_VIRTIO
 -m 9P_FS
 -e 9P_FS_POSIX_ACL
