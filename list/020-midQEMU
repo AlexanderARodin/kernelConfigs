@@ -6,6 +6,10 @@
 #-e random_trust_bootloader
 #-e i2c_virtio
 
+# NET append
+-m inet_diag
+-m inet_udp_diag
+-m inet_raw_diag
 
 # VIRTIO BLOCK
 -e block
