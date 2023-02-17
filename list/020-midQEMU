@@ -18,7 +18,7 @@
 -e ext4_fs
 -e ext4_fs_posix_acl
 -e vfat_fs
--e xfat_fs
+-e exfat_fs
 -e iso9660_fs
 -e joliet
 -e zisofs
