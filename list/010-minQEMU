@@ -18,8 +18,8 @@
 -e VIRTIO_pci
 
 # 9p support
--e NET_9P
--e NET_9P_VIRTIO
+-m NET_9P
+-m NET_9P_VIRTIO
 -e 9P_FS
 -e 9P_FS_POSIX_ACL
 
@@ -34,6 +34,9 @@
 -m IPV6
 -e net
 -e inet
+-m inet_diag
+-m inet_udp_diag
+-m inet_raw_diag
 -e netdevices
 -e VIRTIO_net
 -d wireless
