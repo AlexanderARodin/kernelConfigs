@@ -35,7 +35,7 @@
 -e net
 -e inet
 -e netdevices
--m VIRTIO_net
+-e VIRTIO_net
 -d wireless
 -d wlan
 -d usb_net_drivers
