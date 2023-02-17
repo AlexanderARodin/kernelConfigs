@@ -1,5 +1,6 @@
 ### testing
 -m x86_MSR
+-m haltpoll_cpuidle
 
 #-e legacy_vsyscall_none
 #-e random_trust_bootloader
