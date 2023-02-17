@@ -10,6 +10,7 @@
 -m inet_diag
 -m inet_udp_diag
 -m inet_raw_diag
+-m vsockets
 
 # VIRTIO BLOCK
 -e block
