@@ -41,8 +41,8 @@
 -d hw_random_amd
 -d hw_random_via
 
--e VIRTIO_CONSOLE
--e virtio_input
+-m VIRTIO_CONSOLE
+-m virtio_input
 
 
 # SATA ISA SERIAL
