@@ -6,7 +6,7 @@
 -e rtc_class
 -e DMI
 -e ACPI
--e ACPI_BUTTON
+-m ACPI_BUTTON
 -d acpi_ac
 -d acpi_battery
 -d acpi_fan
