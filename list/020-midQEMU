@@ -26,12 +26,12 @@
 -e ext2_fs
 -m ext4_fs
 -e ext4_fs_posix_acl
-#-e nls_utf8
-#-e vfat_fs
-#-e exfat_fs
+-m nls_utf8
 -m iso9660_fs
 -e joliet
 -e zisofs
+#-e vfat_fs
+#-e exfat_fs
 
 # append VIRTIO
 -e hw_random
