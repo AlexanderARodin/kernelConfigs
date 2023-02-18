@@ -42,7 +42,7 @@
 -e joliet
 -e zisofs
 #-e vfat_fs
-#-e exfat_fs
+-m exfat_fs
 
 # append VIRTIO
 -e hw_random
