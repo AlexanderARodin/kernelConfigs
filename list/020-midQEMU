@@ -21,7 +21,7 @@
 -m blk_dev_sd
 -m blk_dev_sr
 -m chr_dev_sg
--e scsi_VIRTIO
+-m scsi_VIRTIO
 -m virtio_blk
 
 # file systems
