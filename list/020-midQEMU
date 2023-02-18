@@ -18,8 +18,8 @@
 # VIRTIO BLOCK
 -e block
 -e scsi
--m blk_dev_sd
--m blk_dev_sr
+-e blk_dev_sd
+-e blk_dev_sr
 -e chr_dev_sg
 -m scsi_VIRTIO
 -m virtio_blk
