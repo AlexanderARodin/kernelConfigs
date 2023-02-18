@@ -20,9 +20,16 @@
 -e scsi
 -m blk_dev_sd
 -m blk_dev_sr
--m chr_dev_sg
+-e chr_dev_sg
 -m scsi_VIRTIO
 -m virtio_blk
+
+# SATA ISA SERIAL
+-e lpc_ich
+-e ata
+-e sata_ahci
+-e i2c_i801
+
 
 # file systems
 -e unicode
@@ -47,12 +54,6 @@
 -m VIRTIO_CONSOLE
 -m virtio_input
 
-
-# SATA ISA SERIAL
--e lpc_ich
--m ata
--e sata_ahci
--e i2c_i801
 
 # Graphics
 -d vga_arb
