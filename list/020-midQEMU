@@ -50,7 +50,7 @@
 
 # SATA ISA SERIAL
 -e lpc_ich
--e ata
+-m ata
 -e sata_ahci
 -e i2c_i801
 
