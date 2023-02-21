@@ -1,10 +1,9 @@
 -e multiuser
 -e BUG
+-m crypto_dev_virtio
 
 
 ### testing
 -m x86_MSR
 -m haltpoll_cpuidle
-
-#-e legacy_vsyscall_none
 
