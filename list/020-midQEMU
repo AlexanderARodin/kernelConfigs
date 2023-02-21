@@ -41,11 +41,11 @@
 -e joliet
 -e zisofs
 -m vfat_fs
---set-str fat_default_iocharset 'ascii'
+--set-str fat_default_iocharset ascii
 -e fat_default_utf8
 -m exfat_fs
 
---set-str nls_default 'utf8'
+--set-str nls_default utf8
 -m nls_utf8
 -m nls_ascii
 
