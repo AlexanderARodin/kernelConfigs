@@ -1,4 +1,4 @@
---set-str DEFAULT_HOSTNAME '<raaNux>'
+--set-str DEFAULT_HOSTNAME <raaNux>
 -e 64BIT
 -e WERROR
 
