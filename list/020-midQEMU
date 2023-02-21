@@ -35,6 +35,7 @@
 -e unicode
 -m cifs
 -e cifs_xattr
+-e cifs_posix
 -e ext2_fs
 -m ext4_fs
 -e ext4_fs_posix_acl
