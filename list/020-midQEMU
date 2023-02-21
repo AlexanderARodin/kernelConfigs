@@ -1,14 +1,3 @@
-### testing
--m x86_MSR
--m haltpoll_cpuidle
-
-
-#-e legacy_vsyscall_none
-#-e random_trust_bootloader
-#-e i2c_virtio
-
-
-
 # NET append
 -m inet_diag
 -m inet_udp_diag
