@@ -1,3 +1,7 @@
+# CPU features
+-e legacy_vsyscall_none
+
+
 # NET append
 -m inet_diag
 -m inet_udp_diag
