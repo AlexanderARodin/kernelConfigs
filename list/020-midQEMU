@@ -41,7 +41,7 @@
 -m iso9660_fs
 -e joliet
 -e zisofs
-#-e vfat_fs
+-m vfat_fs
 -m exfat_fs
 
 # append VIRTIO
