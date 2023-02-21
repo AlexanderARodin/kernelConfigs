@@ -1,0 +1,10 @@
+-e multiuser
+-e BUG
+
+
+### testing
+-m x86_MSR
+-m haltpoll_cpuidle
+
+#-e legacy_vsyscall_none
+
