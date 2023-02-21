@@ -40,6 +40,7 @@
 -m iso9660_fs
 -e joliet
 -e zisofs
+-m udf_fs
 -m vfat_fs
 --set-str fat_default_iocharset ascii
 -e fat_default_utf8
