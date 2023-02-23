@@ -1,0 +1,34 @@
+menu "loadable minimum setup"
+
+# MAIN kernel should speak
+config PRINTK
+	bool "PRINTK"
+	default y
+config PRINTK_TIME
+	bool "PRINTK_TIME"
+	default y
+config TTY
+	bool "TTY"
+	default y
+config UNIX98_PTYS
+	bool "UNIX98_PTYS"
+	default n
+config LEGACY_PTYS
+	bool "LEGACY_PTYS"
+	default n
+
+
+# INITRD
+config BLK_DEV_INITRD
+	bool "BLK_DEV_INITRD"
+	default y
+
+# suppornt executing scripts (/init) and ordinary binary (ELF)
+config BINFMT_SCRIPT
+	bool "BINFMT_SCRIPT"
+	default y
+config BINFMT_ELF
+	bool "BINFMT_ELF"
+	default y
+
+endmenu
