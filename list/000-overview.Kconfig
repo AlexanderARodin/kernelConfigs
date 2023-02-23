@@ -3,10 +3,11 @@ config DEFAULT_HOSTNAME
 	string "DEFAULT_HOSTNAME"
 	default "raaNux"
 
+config WERROR
+	bool "treat WARNINGs as ERRORs"
+	default y
+
 config 64BIT
 	bool "64 bit"
 	default y
 
-config WERROR
-	bool "treat WARNINGs as ERRORs"
-	default y
