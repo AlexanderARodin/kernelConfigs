@@ -1,5 +1,9 @@
 menu "recommende minimal useful options"
 
+config BUG
+	bool "BUG"
+	default y
+
 config PROC_FS
 	bool "PROC_FS"
 	default y
