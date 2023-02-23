@@ -1,16 +1,12 @@
 mainmenu "AlexanderARodin meta-configurator for custom Linux Kernel"
 
-config DEFAULT_HOSTNAME
-	string "DEFAULT_HOSTNAME"
-	default "raaNux"
+source "/list/000-overview.Kconfig"
 
-config 64BIT
-	bool "64 bit"
-	default y
+menu "OTHER MENU"
 
-config WERROR
-	bool "treat WARNINGs as ERRORs"
-	default y
+	config OTHER_MENU_OPT
+		string "other menu opt string"
+endmenu
 
 
 
@@ -65,11 +61,6 @@ choice AN_CHOICE
 		tristate "tri-variant 2"
 endchoice
 
-menu "OTHER MENU"
-
-	config OTHER_MENU_OPT
-		string "other menu opt string"
-endmenu
 
 config MAIN_OPT
 	bool "main option"
