@@ -1,4 +1,19 @@
-mainmenu "AlexanderARodin learning template of KConfig skeleton"
+mainmenu "AlexanderARodin meta-configurator for custom Linux Kernel"
+
+config DEFAULT_HOSTNAME
+	string "DEFAULT_HOSTNAME"
+	default "raaNux"
+
+config 64BIT
+	bool "64 bit"
+	default y
+
+config WERROR
+	bool "treat WARNINGs as ERRORs"
+	default y
+
+
+
 
 config SIMPLE_BOOL
 	bool "a root bool"
@@ -76,4 +91,4 @@ menuconfig MODULES_ON
 		tristate activator
 		..still can't make it work
 
-source "anotherKConfig"
+#source "anotherKConfig"
