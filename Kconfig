@@ -1,6 +1,6 @@
 mainmenu "AlexanderARodin meta-configurator for custom Linux Kernel"
 
-source "/list/000-overview.Kconfig"
+source "./list/000-overview.Kconfig"
 
 menu "OTHER MENU"
 
