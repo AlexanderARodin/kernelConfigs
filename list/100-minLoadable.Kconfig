@@ -14,8 +14,8 @@ config TTY
 if TTY
 	config UNIX98_PTYS
 		bool "UNIX98_PTYS"
-		default y
 		default n if TTY
+		default y
 	config LEGACY_PTYS
 		bool "LEGACY_PTYS"
 		default n

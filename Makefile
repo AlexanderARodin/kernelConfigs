@@ -9,7 +9,7 @@ edit-current:
 	@vi ./list/100-minLoadable.Kconfig
 
 see:
-	@less ./.config
+	@cat ./.config
 
 save-to-git:
 	@git add .

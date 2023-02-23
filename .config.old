@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Main menu
+# AlexanderARodin meta-configurator for custom Linux Kernel
 #
 CONFIG_DEFAULT_HOSTNAME="raaNux"
 CONFIG_WERROR=y
@@ -12,8 +12,8 @@ CONFIG_64BIT=y
 CONFIG_PRINTK=y
 CONFIG_PRINTK_TIME=y
 CONFIG_TTY=y
-# CONFIG_UNIX98_PTYS is not set
-CONFIG_LEGACY_PTYS=y
+CONFIG_UNIX98_PTYS=y
+# CONFIG_LEGACY_PTYS is not set
 CONFIG_BLK_DEV_INITRD=y
 CONFIG_BINFMT_SCRIPT=y
 CONFIG_BINFMT_ELF=y
