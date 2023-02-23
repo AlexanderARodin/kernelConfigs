@@ -1,18 +1,40 @@
-# kernel FS
--e PROC_FS
--e SYSFS
+menu "useful options"
 
-# /DEV
--e DEVTMPFS
--e DEVTMPFS_MOUNT
+config PROC_FS
+	bool "PROC_FS"
+	default y
+config SYSFS
+	bool "SYSFS"
+	default y
+
+config DEVTMPFS
+	bool "DEVTMPFS"
+	default y
+config DEVTMPFS_MOUNT
+	bool "DEVTMPFS_MOUNT"
+	default y
+	depends on DEVTMPFS
+
+endmenu
 
 
-# MODULE
--e MODULES
--e MODULE_UNLOAD
--e MODULE_FORCE_UNLOAD
+menuconfig MODULES
+	bool "support MODULES"
+	modules
+	default y
 
-# modules
--m SERIO_SERPORT
--m HID
-
+if MODULES
+	config MODULE_UNLOAD
+		bool "MODULE_UNLOAD"
+		default y
+		config MODULE_UNLOAD
+			bool "MODULE_UNLOAD"
+			depends on MODULE_UNLOAD
+			default y
+	config SERIO_SERPORT
+		def_tristate m
+		prompt "SERIO_SERPORT"
+	config HID
+		def_tristate m
+		prompt "HID"
+endif	#MODULES
