@@ -2,12 +2,10 @@ config WERROR
 	bool "compiler: treat WARNINGs as ERRORs"
 	default y
 
-
-config DEFAULT_HOSTNAME
-	string "DEFAULT_HOSTNAME"
-	default "raaNux"
-
 config 64BIT
 	bool "64 bit"
 	default y
 
+config DEFAULT_HOSTNAME
+	string "DEFAULT_HOSTNAME"
+	default "raaNux"
