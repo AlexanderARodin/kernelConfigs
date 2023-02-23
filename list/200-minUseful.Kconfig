@@ -27,8 +27,8 @@ if MODULES
 	config MODULE_UNLOAD
 		bool "MODULE_UNLOAD"
 		default y
-		config MODULE_UNLOAD
-			bool "MODULE_UNLOAD"
+		config MODULE_FORCE_UNLOAD
+			bool "MODULE_FORCE_UNLOAD"
 			depends on MODULE_UNLOAD
 			default y
 	config SERIO_SERPORT
