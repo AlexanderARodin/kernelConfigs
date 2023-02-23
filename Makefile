@@ -6,7 +6,7 @@ edit:
 	@vi ./Kconfig
 
 see:
-	@vi -R ./.config
+	@less ./.config
 
 save-to-git:
 	@git add .
