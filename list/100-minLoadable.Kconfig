@@ -20,15 +20,15 @@ config LEGACY_PTYS
 
 # INITRD
 config BLK_DEV_INITRD
-	bool "BLK_DEV_INITRD"
+	bool "support initrd"
 	default y
 
 # suppornt executing scripts (/init) and ordinary binary (ELF)
 config BINFMT_SCRIPT
-	bool "BINFMT_SCRIPT"
+	bool "support txt-scripts"
 	default y
 config BINFMT_ELF
-	bool "BINFMT_ELF"
+	bool "support ELF"
 	default y
 
 endmenu
