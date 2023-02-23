@@ -7,15 +7,18 @@ config PRINTK
 config PRINTK_TIME
 	bool "PRINTK_TIME"
 	default y
+
 config TTY
 	bool "TTY"
 	default y
 config UNIX98_PTYS
 	bool "UNIX98_PTYS"
-	default n
+	default y
+	depends on TTY
 config LEGACY_PTYS
 	bool "LEGACY_PTYS"
 	default n
+	depends on TTY
 
 
 # INITRD
