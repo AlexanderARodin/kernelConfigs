@@ -13,12 +13,9 @@ config TTY
 	default y
 if TTY
 	config UNIX98_PTYS
-		bool "UNIX98_PTYS"
-		default n if TTY
-		default y
+		bool "UNCHECK - UNIX98_PTYS"
 	config LEGACY_PTYS
-		bool "LEGACY_PTYS"
-		default n
+		bool "UNCHECK - LEGACY_PTYS"
 endif
 
 # INITRD
@@ -27,11 +24,11 @@ config BLK_DEV_INITRD
 	default y
 
 # suppornt executing scripts (/init) and ordinary binary (ELF)
-config BINFMT_SCRIPT
-	bool "support txt-scripts"
-	default y
 config BINFMT_ELF
 	bool "support ELF"
+	default y
+config BINFMT_SCRIPT
+	bool "support txt-scripts"
 	default y
 
 endmenu
