@@ -33,8 +33,6 @@ if MODULES
 			default y
 	config SERIO_SERPORT
 		def_tristate m
-		prompt "SERIO_SERPORT"
 	config HID
 		def_tristate m
-		prompt "HID"
 endif	#MODULES
