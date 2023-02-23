@@ -1,4 +1,4 @@
-#mainmenu "AlexanderARodin meta-configurator for custom Linux Kernel"
+mainmenu "AlexanderARodin meta-configurator for custom Linux Kernel"
 
 source "./list/Kconfig.000-overview"
 
