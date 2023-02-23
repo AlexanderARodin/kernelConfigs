@@ -1,4 +1,4 @@
-menu "useful options"
+menu "recommende minimal useful options"
 
 config PROC_FS
 	bool "PROC_FS"
