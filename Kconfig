@@ -4,3 +4,4 @@ source "./list/000-overview.Kconfig"
 
 source "./list/100-minLoadable.Kconfig"
 
+source "./list/200-minUseful.Kconfig"
