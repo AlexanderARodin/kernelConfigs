@@ -20,25 +20,3 @@ config DEVTMPFS_MOUNT
 	depends on DEVTMPFS
 
 endmenu
-
-
-menuconfig MODULES
-	bool "support MODULES"
-	modules
-	default y
-
-if MODULES
-	config MODULE_UNLOAD
-		bool "MODULE_UNLOAD"
-		default y
-		config MODULE_FORCE_UNLOAD
-			bool "MODULE_FORCE_UNLOAD"
-			depends on MODULE_UNLOAD
-			default y
-	config SERIO_SERPORT
-		def_tristate m
-		prompt "SERIO_SERPORT"
-	config HID
-		def_tristate m
-		prompt "HID"
-endif	#MODULES
