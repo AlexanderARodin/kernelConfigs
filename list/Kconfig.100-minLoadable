@@ -1,4 +1,4 @@
-menu "loadable minimum setup"
+menu "minimal LOADABLE"
 
 menu "---- kernel should speak"
 endmenu
