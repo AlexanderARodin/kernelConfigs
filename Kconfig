@@ -8,3 +8,9 @@ source "./list/Kconfig.200-minUseful"
 
 source "./list/Kconfig.500-for_qemu"
 
+
+
+config WERROR
+	bool "compiler: treat WARNINGs as ERRORs"
+	default y
+
