@@ -1,4 +1,4 @@
-menu "recommende minimal useful options"
+menu "minimal COFIGURABLE & DEBUGABLE"
 
 config PROC_FS
 	bool "PROC_FS"
