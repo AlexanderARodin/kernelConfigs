@@ -6,9 +6,5 @@ source "./list/Kconfig.100-minLoadable"
 
 source "./list/Kconfig.200-minUseful"
 
+source "./list/Kconfig.500-for_qemu"
 
-menuconfig FOR_QEMU
-	bool "for QEMU"
-if FOR_QEMU
-	source "./list/Kconfig.500-for_qemu"
-endif
