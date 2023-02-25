@@ -2,7 +2,7 @@ mainmenu "AlexanderARodin meta-configurator for custom Linux Kernel"
 
 source "./list/Kconfig.000-overview"
 
-menu "---- near critical"
+menu "---- common minimal"
 endmenu
 source "./list/Kconfig.100-minLoadable"
 source "./list/Kconfig.200-minUseful"
