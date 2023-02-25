@@ -1,34 +1,38 @@
 menu "loadable minimum setup"
 
-# MAIN kernel should speak
-config PRINTK
-	bool "PRINTK"
-	default y
-config PRINTK_TIME
-	bool "PRINTK_TIME"
-	default y
+menu "---- kernel should speak"
+endmenu
+	config PRINTK
+		bool "PRINTK"
+		default y
+	config PRINTK_TIME
+		bool "PRINTK_TIME"
+		default y
+	
+	config TTY
+		bool "TTY"
+		default y
+	if TTY
+		config UNIX98_PTYS
+			bool "UNCHECK - UNIX98_PTYS"
+		config LEGACY_PTYS
+			bool "UNCHECK - LEGACY_PTYS"
+	endif
 
-config TTY
-	bool "TTY"
-	default y
-if TTY
-	config UNIX98_PTYS
-		bool "UNCHECK - UNIX98_PTYS"
-	config LEGACY_PTYS
-		bool "UNCHECK - LEGACY_PTYS"
-endif
-
+menu "---- ramdisk running"
+endmenu
 # INITRD
 config BLK_DEV_INITRD
 	bool "support initrd"
 	default y
 
-# suppornt executing scripts (/init) and ordinary binary (ELF)
+menu "---- kernel should execute"
+endmenu
 config BINFMT_ELF
 	bool "support ELF"
 	default y
 config BINFMT_SCRIPT
-	bool "support txt-scripts"
+	bool "support txt-scripts like init"
 	default y
 
 endmenu
