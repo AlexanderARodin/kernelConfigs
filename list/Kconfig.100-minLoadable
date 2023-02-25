@@ -29,10 +29,10 @@ config BLK_DEV_INITRD
 menu "---- kernel should execute"
 endmenu
 config BINFMT_ELF
-	bool "support ELF"
+	bool "run ELF"
 	default y
 config BINFMT_SCRIPT
-	bool "support txt-scripts like init"
+	bool "run scripts '#!' like init"
 	default y
 
 endmenu
