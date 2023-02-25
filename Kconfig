@@ -1,7 +1,10 @@
 mainmenu "AlexanderARodin meta-configurator for custom Linux Kernel"
 
-source "./list/Kconfig.000-overview"
+#source "./list/Kconfig.000-overview"
 
-source "./list/Kconfig.100-minLoadable"
+#source "./list/Kconfig.100-minLoadable"
 
-source "./list/Kconfig.200-minUseful"
+#source "./list/Kconfig.200-minUseful"
+
+
+source "./list/Kconfig.*"
