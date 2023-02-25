@@ -14,9 +14,9 @@ endmenu
 		default y
 	if TTY
 		config UNIX98_PTYS
-			bool "UNCHECK - UNIX98_PTYS"
+			bool "UNIX98_PTYS"
 		config LEGACY_PTYS
-			bool "UNCHECK - LEGACY_PTYS"
+			bool "LEGACY_PTYS"
 	endif
 
 menu "---- ramdisk running"
