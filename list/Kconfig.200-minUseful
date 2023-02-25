@@ -1,4 +1,4 @@
-menu "configurable & debugable"
+menu "minimal"
 
 config PROC_FS
 	bool "PROC_FS"
