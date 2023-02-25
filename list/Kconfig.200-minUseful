@@ -1,9 +1,5 @@
 menu "recommende minimal useful options"
 
-config BUG
-	bool "BUG"
-	default y
-
 config PROC_FS
 	bool "PROC_FS"
 	default y
@@ -21,6 +17,10 @@ config DEVTMPFS_MOUNT
 
 menu "---- others"
 endmenu
+	config BUG
+		bool "BUG"
+		default y
+
 	config SERIO_SERPORT
 		def_tristate m
 		prompt "SERIO_SERPORT"
