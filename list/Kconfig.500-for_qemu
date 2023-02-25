@@ -4,5 +4,5 @@ menuconfig FOR_QEMU
 if FOR_QEMU
 	#source "./qemu/Kconfig.500-for_qemu"
 	config 64BIT
-		bool
+		bool "another 64"
 endif
