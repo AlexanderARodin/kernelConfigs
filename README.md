@@ -1,8 +1,8 @@
 # kernelConfigs
-configuration for linux-kernel configuration 
+meta-configuration for linux-kernel configuration 
 
 # kernel source
-v5.15.85
+it tests over linux-5.15.85
 
 # remarks 
 for full functionality I replace two utils from 'kconfig-frontends' with analogs from kernel-source:
