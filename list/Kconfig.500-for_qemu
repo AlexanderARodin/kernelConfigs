@@ -3,4 +3,6 @@ menuconfig FOR_QEMU
 	bool "for QEMU"
 if FOR_QEMU
 	#source "./qemu/Kconfig.500-for_qemu"
+	config 64BIT
+		bool
 endif
