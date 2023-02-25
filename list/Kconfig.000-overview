@@ -1,6 +1,3 @@
-config WERROR
-	bool "compiler: treat WARNINGs as ERRORs"
-	default y
 
 config DEFAULT_HOSTNAME
 	string "DEFAULT_HOSTNAME"
