@@ -1,5 +1,5 @@
 
-menuconfig FOR_QEMU
+menuconfig FOR_QEMU_GROUP
 	bool "for QEMU"
 if FOR_QEMU
 	#source "./qemu/Kconfig.500-for_qemu"
