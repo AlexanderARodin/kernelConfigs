@@ -1,4 +1,4 @@
-menu "loadable"
+menu "critical"
 
 menu "---- kernel should speak"
 endmenu
