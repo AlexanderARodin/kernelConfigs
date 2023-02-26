@@ -2,7 +2,7 @@
 menuconfig FOR_QEMU_GROUP
 	bool "for QEMU"
 if FOR_QEMU
-	source "./qemu/Kconfig.510-minQEMU"
+	source "qemu/Kconfig.510-minQEMU"
 	config 64BIT
 		bool "another 64"
 endif
