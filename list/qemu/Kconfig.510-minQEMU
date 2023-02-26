@@ -1,48 +1,49 @@
 menu "--- Intel 06/9e (family: 0x6, model: 0x9e, stepping: 0xd)"
+	config SMP
+		bool "SMP"
+		default y
+	config NR_CPUS
+		int "max CPUs"
+		default 4
+		depens on SMP
 endmenu
-
-config SMP
-	bool "SMP"
-	default y
-config NR_CPUS
-	int "max CPUs"
-	default 4
 
 menu "---- mother brd opts"
+	config RTC_CLASS
+		bool "rtc_class"
+		default y
+	config DMI
+		bool "DMI"
+		default y
+	config ACPI
+		bool "ACPI"
+		default y
+	config ACPI_BUTTON
+		tristate "ACPI_BUTTON"
+		default m
+	config ACPI_AC
+		bool "acpi_ac"
+	config ACPI_BATTERY
+		bool "acpi_battery"
+	config ACPI_FAN
+		bool "acpi_fan"
+	config ACPI_THERMAL
+		bool "acpi_thermal"
+
+	menu "---- BUS"
+	endmenu
+	config PCI
+		bool "pci"
+		default y
+	config VIRTION_MENU
+		bool "VIRTION_MENU"
+		default y
+	config VIRTIO_PCI
+		bool "VIRTIO_pci"
+		default y
+
 endmenu
 
-config RTC_CLASS
-	bool "rtc_class"
-	default y
-config DMI
-	bool "DMI"
-	default y
-config ACPI
-	bool "ACPI"
-	default y
-config ACPI_BUTTON
-	tristate "ACPI_BUTTON"
-	default m
-config ACPI_AC
-	bool "acpi_ac"
-config ACPI_BATTERY
-	bool "acpi_battery"
-config ACPI_FAN
-	bool "acpi_fan"
-config ACPI_THERMAL
-	bool "acpi_thermal"
-
-menu "---- BUS"
-endmenu
-config PCI
-	bool "pci"
-	default y
-config VIRTION_MENU
-	bool "VIRTION_MENU"
-	default y
-config VIRTIO_PCI
-	bool "VIRTIO_pci"
-	default y
 
 menu "---- 9p support"
 endmenu
