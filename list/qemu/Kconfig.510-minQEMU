@@ -1,4 +1,5 @@
 menu "--- Intel 06/9e (family: 0x6, model: 0x9e, stepping: 0xd)"
+endmenu
 	config SMP
 		bool "SMP"
 		default y
@@ -6,9 +7,8 @@ menu "--- Intel 06/9e (family: 0x6, model: 0x9e, stepping: 0xd)"
 		int "max CPUs"
 		default 4
 		depends on SMP
-endmenu
 
-menu "---- mother brd opts"
+menu "BOARD & BUS"
 	config RTC_CLASS
 		bool "rtc_class"
 		default y
@@ -44,86 +44,84 @@ menu "---- mother brd opts"
 
 endmenu
 
-
-menu "---- 9p support"
-endmenu
-config NET_9P
-	bool "net 9p"
-	default y
-if NET_9P
-	config NET_9P_VIRTIO
-		bool "NET_9P_VIRTIO"
+menu "GUEST under HYPERVISOR"
+	config HYPERVISOR_GUEST
+		bool "HYPERVISOR_GUEST"
 		default y
-	config 9P_FS
-		tristate "9P_FS"
+	config PARAVIRT
+		bool "PARAVIRT"
+		default y
+	config PARAVIRT_SPINLOCKS
+		bool "PARAVIRT_SPINLOCKS"
+		default y
+	config PARAVIRT_TIME_ACCOUNTING
+		bool "PARAVIRT_TIME_ACCOUNTING"
+		default y
+endmenu
+
+menu "network"
+	config IPV6
+		tristate "IPv6"
 		default m
-	config 9P_FS_POSIX_ACL
-		bool "9P_FS_POSIX_ACL"
+	config NET
+		bool "NET"
 		default y
-endif
-
-menu "---- GUEST under HYPERVISOR"
+	config INET
+		bool "INET"
+		default y
+	config NETDEVICES
+		bool "NETDEVICES"
+		default y
+	config NETFAILOVER
+		bool "NETFAILOVER"
+		default y
+	config VIRTIO_NET
+		tristate "virtio-net"
+		default m
+	config WIRELESS
+		bool "WIRELESS"
+		default n
+	config WLAN
+		bool "WLAN"
+		default n
+	config USB_NET_DRIVER
+		bool "USB_NET_DRIVER"
+		default n
+	config ETHERNET
+		bool "ETHERNET"
+		default n
+	config POSIX_TIMERS
+		bool "POSIX_TIMERS"
+		default y
+	menu "---- 9p support"
+	endmenu
+	config NET_9P
+		bool "net 9p"
+		default y
+	if NET_9P
+		config NET_9P_VIRTIO
+			bool "NET_9P_VIRTIO"
+			default y
+		config 9P_FS
+			tristate "9P_FS"
+			default m
+		config 9P_FS_POSIX_ACL
+			bool "9P_FS_POSIX_ACL"
+			default y
+	endif
 endmenu
-config HYPERVISOR_GUEST
-	bool "HYPERVISOR_GUEST"
-	default y
-config PARAVIRT
-	bool "PARAVIRT"
-	default y
-config PARAVIRT_SPINLOCKS
-	bool "PARAVIRT_SPINLOCKS"
-	default y
-config PARAVIRT_TIME_ACCOUNTING
-	bool "PARAVIRT_TIME_ACCOUNTING"
-	default y
 
-menu "---- minimal net support"
+menu "Input devices"
+	config INPUT_MOUSDEV
+		tristate "INPUT_MOUSDEV"
+		default m
+	config MOUSE_PS2
+		tristate "MOUSE_PS2"
+		default m
+	config USERIO
+		tristate "USERIO"
+		default m
+	config INPUT_TABLET
+		bool "INPUT_TABLET"
+		default y
 endmenu
-config IPV6
-	tristate "IPv6"
-	default m
-config NET
-	bool "NET"
-	default y
-config INET
-	bool "INET"
-	default y
-config NETDEVICES
-	bool "NETDEVICES"
-	default y
-config NETFAILOVER
-	bool "NETFAILOVER"
-	default y
-config VIRTIO_NET
-	tristate "virtio-net"
-	default m
-config WIRELESS
-	bool "WIRELESS"
-	default n
-config WLAN
-	bool "WLAN"
-	default n
-config USB_NET_DRIVER
-	bool "USB_NET_DRIVER"
-	default n
-config ETHERNET
-	bool "ETHERNET"
-	default n
-config POSIX_TIMERS
-	bool "POSIX_TIMERS"
-	default y
-
-menu "---- Input devices"
-endmenu
-config INPUT_MOUSDEV
-	tristate "INPUT_MOUSDEV"
-	default m
-config MOUSE_PS2
-	tristate "MOUSE_PS2"
-	default m
-config USERIO
-	tristate "USERIO"
-	default m
-config INPUT_TABLET
-	bool "INPUT_TABLET"
-	default y
