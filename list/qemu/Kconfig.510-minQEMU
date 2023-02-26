@@ -5,7 +5,7 @@ menu "--- Intel 06/9e (family: 0x6, model: 0x9e, stepping: 0xd)"
 	config NR_CPUS
 		int "max CPUs"
 		default 4
-		depens on SMP
+		depends on SMP
 endmenu
 
 menu "---- mother brd opts"
