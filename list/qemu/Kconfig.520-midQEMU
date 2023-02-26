@@ -1,10 +1,20 @@
+config LPC_ICH
+	tristate "Intel ICH LPC"
+	default y
+	depends on PCI
+config I2C_I801
+	tristate "Intel 82801 (ICH/PCH)"
+	default y
+	depends on PCI
+
+
 config BLOCK
-	bool "Enable the block layer"
+	bool "Enable the BLOCK layer"
 	default y
 
-
-
-config ATA
+if BLOCK
+	
+	config ATA
 		tristate "ATA"
 		default y
 		depends on BLOCK
@@ -14,10 +24,6 @@ config ATA
 			default y
 			select SCSI
 	endif #ATA
-	
-
-
-if BLOCK
 	
 	config SCSI
 		tristate "SCSI"
