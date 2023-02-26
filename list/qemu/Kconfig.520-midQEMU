@@ -138,10 +138,10 @@ menu "FS language support"
 			string "Default NLS Option"
 			default "untf8"
 		config NLS_ASCII
-			tirstate "ASCII (United States)"
+			tristate "ASCII (United States)"
 			default m
 		config NLS_UTF8
-			tirstate "NLS UTF-8"
+			tristate "NLS UTF-8"
 			default m
 	endif #NLS
 	config UNICODE
