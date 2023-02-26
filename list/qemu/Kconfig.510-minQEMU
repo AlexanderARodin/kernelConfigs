@@ -90,9 +90,6 @@ menu "network"
 	config ETHERNET
 		bool "ETHERNET"
 		default n
-	config POSIX_TIMERS
-		bool "POSIX_TIMERS"
-		default y
 	menu "---- 9p support"
 	endmenu
 	config NET_9P
@@ -109,6 +106,11 @@ menu "network"
 			bool "9P_FS_POSIX_ACL"
 			default y
 	endif
+	menu "---- others"
+	endmenu
+		config POSIX_TIMERS
+			bool "POSIX_TIMERS"
+			default y
 endmenu
 
 menu "Input devices"
