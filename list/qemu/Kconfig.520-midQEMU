@@ -63,7 +63,7 @@ if BLOCK
 				bool "Ext4 POSIX Access Control Lists"
 				default y
 				depends on EXT4_FS
-		comments "CD-ROM/DVD"
+		comment "CD-ROM/DVD"
 		config ISO9660_FS
 			tristate "ISO 9660 CDROM file system support"
 			default m
