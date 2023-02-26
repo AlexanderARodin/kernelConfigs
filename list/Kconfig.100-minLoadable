@@ -7,7 +7,7 @@ comment "[ kernel should speak ]"
 	config PRINTK_TIME
 		bool "PRINTK_TIME"
 		default y
-		depeds on PRINTK
+		depends on PRINTK
 	
 	config TTY
 		bool "TTY"
