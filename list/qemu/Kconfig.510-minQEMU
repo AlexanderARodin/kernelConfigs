@@ -16,15 +16,17 @@ menu "CPU"
 	config HYPERVISOR_GUEST
 		bool "HYPERVISOR_GUEST"
 		default y
-	config PARAVIRT
-		bool "PARAVIRT"
-		default y
-	config PARAVIRT_SPINLOCKS
-		bool "PARAVIRT_SPINLOCKS"
-		default y
-	config PARAVIRT_TIME_ACCOUNTING
-		bool "PARAVIRT_TIME_ACCOUNTING"
-		default y
+	if HYPERVISOR_GUEST
+		config PARAVIRT
+			bool "PARAVIRT"
+			default y
+		config PARAVIRT_SPINLOCKS
+			bool "PARAVIRT_SPINLOCKS"
+			default y
+		config PARAVIRT_TIME_ACCOUNTING
+			bool "PARAVIRT_TIME_ACCOUNTING"
+			default y
+	endif
 
 	menu "---- others"
 	endmenu
