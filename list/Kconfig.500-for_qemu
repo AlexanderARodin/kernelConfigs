@@ -3,4 +3,5 @@ menuconfig FOR_QEMU_GROUP
 	bool "for QEMU"
 if FOR_QEMU_GROUP
 	source "./list/qemu/Kconfig.510-minQEMU"
+	source "./list/qemu/Kconfig.520-midQEMU"
 endif
