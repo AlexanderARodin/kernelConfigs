@@ -1,3 +1,4 @@
+
 config PCI
 	bool "pci"
 	default y
@@ -15,42 +16,46 @@ config BLOCK
 	default y
 
 if BLOCK
+	menu "disks"
+		config ATA
+			tristate "ATA"
+			default y
+			depends on BLOCK
+		if ATA
+			config SATA_AHCI
+				tristate "SATA_AHCI"
+				default y
+				select SCSI
+		endif #ATA
+		
+		config SCSI
+			tristate "SCSI"
+			default y
+		if SCSI
+			config BLK_DEV_SD
+				tristate "BLK_DEV_SD"
+				default y
+			config BLK_DEV_SR
+				tristate "BLK_DEV_SR"
+				default y
+			config CHR_DEV_SG
+				bool "CHR_DEV_SG"
+				default y
+			config SCSI_VIRTIO
+				tristate "SCSI_VIRTIO"
+				default m
+				#depends on VIRTIO
+			config VIRTIO_BLK
+				tristate "VIRTIO_BLK"
+				default m
+				#depends on VIRTIO
+		endif #SCSI
+	endmenu # discs
 	
-	config ATA
-		tristate "ATA"
-		default y
-		depends on BLOCK
-	if ATA
-		config SATA_AHCI
-			tristate "SATA_AHCI"
-			default y
-			select SCSI
-	endif #ATA
-	
-	config SCSI
-		tristate "SCSI"
-		default y
-	if SCSI
-		config BLK_DEV_SD
-			tristate "BLK_DEV_SD"
-			default y
-		config BLK_DEV_SR
-			tristate "BLK_DEV_SR"
-			default y
-		config CHR_DEV_SG
-			bool "CHR_DEV_SG"
-			default y
-		config SCSI_VIRTIO
-			tristate "SCSI_VIRTIO"
-			default m
-			#depends on VIRTIO
-		config VIRTIO_BLK
-			tristate "VIRTIO_BLK"
-			default m
-			#depends on VIRTIO
-	endif #SCSI
+	menu "block FS"
+	endmenu
 endif #BLOCK
-
+	
 menu "hardware RANDOM"
 	config HW_RANDOM
 		tristate "HW_RANDOM"
