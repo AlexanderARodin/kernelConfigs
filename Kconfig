@@ -2,18 +2,15 @@ mainmenu "AlexanderARodin meta-configurator for custom Linux Kernel"
 
 source "./list/Kconfig.000-overview"
 
-menu "---- common minimal"
-endmenu
+comment "common minimal"
 source "./list/Kconfig.100-minLoadable"
 source "./list/Kconfig.200-minUseful"
 
-menu "---- recommends"
-endmenu
+comment "recommends"
 source "./list/Kconfig.500-for_qemu"
 
 
-menu "---- compiler"
-endmenu
+comment "compiler"
 config WERROR
 	bool "treat WARNINGs as ERRORs"
 	default y
