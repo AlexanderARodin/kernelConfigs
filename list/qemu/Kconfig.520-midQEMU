@@ -8,6 +8,12 @@ menu "Graphics"
 	config DRM_BOCHS
 		tristate "DRM_BOCHS"
 		default y
+	config DUMMY_CONSOLE_COLUMNS
+		int "DUMMY_CONSOLE_COLUMNS"
+		default 128
+	config DUMMY_CONSOLE_ROWS
+		int "DUMMY_CONSOLE_ROWS"
+		default 48
 endmenu
 
 menu "hardware RANDOM"
