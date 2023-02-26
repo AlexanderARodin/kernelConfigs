@@ -1,4 +1,4 @@
-menu "critical"
+menu "COMMON: critical"
 
 comment "[ kernel should speak ]"
 	config PRINTK
