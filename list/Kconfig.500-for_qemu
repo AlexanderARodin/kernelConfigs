@@ -2,8 +2,8 @@
 menuconfig FOR_QEMU_GROUP
 	bool "for QEMU"
 if FOR_QEMU_GROUP
-	comment "[ minimal ]"
+	comment "[ MIN ]"
 	source "./list/qemu/Kconfig.510-minQEMU"
-	comment "[ recommended ]"
+	comment "[ RECOMMENDS ]"
 	source "./list/qemu/Kconfig.520-midQEMU"
 endif
