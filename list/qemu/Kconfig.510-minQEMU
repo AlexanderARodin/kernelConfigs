@@ -1,6 +1,5 @@
 menu "CPU"
 	comment "Intel 06/9e (family: 0x6, model: 0x9e, stepping: 0xd)"
-	endmenu
 	config SMP
 		bool "SMP"
 		default y
