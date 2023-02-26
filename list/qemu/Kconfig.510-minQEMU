@@ -1,5 +1,6 @@
-menu "--- Intel 06/9e (family: 0x6, model: 0x9e, stepping: 0xd)"
-endmenu
+menu "CPU"
+	menu "--- Intel 06/9e (family: 0x6, model: 0x9e, stepping: 0xd)"
+	endmenu
 	config SMP
 		bool "SMP"
 		default y
@@ -10,6 +11,7 @@ endmenu
 	config LEGACY_VSYSCALL_NONE
 		bool "legacy_vsyscall_none"
 		default y
+endmenu
 
 
 menu "BOARD & BUS"
