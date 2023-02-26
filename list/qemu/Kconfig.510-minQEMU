@@ -123,9 +123,6 @@ config MOUSE_PS2
 config USERIO
 	tristate "USERIO"
 	default m
-config SERIO_SERPORT
-	bool "SERIO_SERPORT"
-	default n
 config INPUT_TABLET
 	bool "INPUT_TABLET"
 	default y
