@@ -89,7 +89,7 @@ if BLOCK
 			default m
 		if VFAT_FS
 			config FAT_DEFAULT_IOCHARSET
-				string ""
+				string "Default iocharset for FAT"
 				default "ascii"
 			config FAT_DEFAULT_UTF8
 			 bool "Enable FAT UTF-8 option by default"
