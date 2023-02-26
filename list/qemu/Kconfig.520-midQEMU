@@ -129,6 +129,25 @@ if NETWORK_FILESYSTEMS
 			depends on 9P_FS
 endif #NETWORK_FILESYSTEMS
 
+menu "FS language support"
+	config NLS
+		bool ""
+		default y
+	if NLS
+		config NLS_DEFAULT
+			string "Default NLS Option"
+			default "untf8"
+		config NLS_ASCII
+			tirstate "ASCII (United States)"
+			default m
+		config NLS_UTF8
+			tirstate "NLS UTF-8"
+			default m
+	endif #NLS
+	config UNICODE
+		bool "UTF-8 normalization and casefolding support"
+		default y
+endmenu
 	
 menu "hardware RANDOM"
 	config HW_RANDOM
