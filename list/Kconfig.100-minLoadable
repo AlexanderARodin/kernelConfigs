@@ -1,6 +1,6 @@
 menu "critical"
 
-comment "kernel should speak"
+comment "[ kernel should speak ]"
 	config PRINTK
 		bool "PRINTK"
 		default y
@@ -18,12 +18,12 @@ comment "kernel should speak"
 			bool "LEGACY_PTYS"
 	endif
 
-comment "ramdisk running"
+comment "[ ramdisk running ]"
 config BLK_DEV_INITRD
 	bool "support initrd"
 	default y
 
-comment "kernel should execute"
+comment "[ kernel should execute ]"
 config BINFMT_ELF
 	bool "run ELF"
 	default y
