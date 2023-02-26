@@ -9,12 +9,12 @@ menu "NEXXX"
 			default y
 		config HW_RANDOM_INTEL
 			tristate "HW_RANDOM_INTEL"
-			default y
+			default n
 		config HW_RANDOM_AMD
 			tristate "HW_RANDOM_AMD"
-			default y
+			default n
 		config HW_RANDOM_VIA
 			tristate "HW_RANDOM_VIA"
-			default y
+			default n
 	endif
 endmenu
