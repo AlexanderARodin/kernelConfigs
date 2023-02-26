@@ -1,9 +1,21 @@
 -e multiuser
--e BUG
+
 -m crypto_dev_virtio
 
 
 ### testing
 -m x86_MSR
 -m haltpoll_cpuidle
+
+
+# NET append
+-m inet_diag
+-m inet_udp_diag
+-m inet_raw_diag
+-m vsockets
+
+
+-m VIRTIO_CONSOLE
+-m virtio_input
+
 
