@@ -123,6 +123,10 @@ if NETWORK_FILESYSTEMS
 		tristate "Plan 9 Resource Sharing Support (9P2000)"
 		default m
 		depends on INET && NET_9P
+		config 9P_FS_POSIX_ACL
+			bool "9P POSIX Access Control Lists"
+			default y
+			depends on 9P_FS
 endif #NETWORK_FILESYSTEMS
 
 	
