@@ -1,14 +1,16 @@
-# Graphics
-config VGA_ARB
-	bool "VGA_ARB"
-	default n
-config DRM
-	tristate "DRM"
-	default y
-config DRM_BOCHS
-	tristate "DRM_BOCHS"
-	default y
+menu "Graphics"
+	config VGA_ARB
+		bool "VGA_ARB"
+		default n
+	config DRM
+		tristate "DRM"
+		default y
+	config DRM_BOCHS
+		tristate "DRM_BOCHS"
+		default y
+endmenu
 
+menu "hardware RANDOM"
 	config HW_RANDOM
 		tristate "HW_RANDOM"
 		default y
@@ -26,4 +28,5 @@ config DRM_BOCHS
 			tristate "HW_RANDOM_VIA"
 			default n
 	endif
+endmenu
 
