@@ -1,5 +1,5 @@
 menu "CPU"
-	comment "Intel 06/9e (family: 0x6, model: 0x9e, stepping: 0xd)"
+	comment "< Intel 06/9e (family: 0x6, model: 0x9e, stepping: 0xd) >"
 	config SMP
 		bool "SMP"
 		default y
@@ -10,7 +10,6 @@ menu "CPU"
 		default 4
 		depends on SMP
 		
-	comment "GUEST under HYPERVISOR"
 	config HYPERVISOR_GUEST
 		bool "HYPERVISOR_GUEST"
 		default y
@@ -26,7 +25,7 @@ menu "CPU"
 			default y
 	endif
 
-	comment "others"
+	comment "[ others ]"
 	config LEGACY_VSYSCALL_NONE
 		bool "legacy_vsyscall_none"
 		default y
@@ -98,7 +97,7 @@ menu "network"
 	config ETHERNET
 		bool "ETHERNET"
 		default n
-	comment "9p support"
+	comment "[ 9p support ]"
 		depends on NET_9P
 	config NET_9P
 		bool "net 9p"
@@ -114,7 +113,7 @@ menu "network"
 			bool "9P_FS_POSIX_ACL"
 			default y
 	endif
-	comment "others"
+	comment "[ others ]"
 		config POSIX_TIMERS
 			bool "POSIX_TIMERS"
 			default y
