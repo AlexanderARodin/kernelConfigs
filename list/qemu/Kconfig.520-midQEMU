@@ -63,6 +63,23 @@ if BLOCK
 				bool "Ext4 POSIX Access Control Lists"
 				default y
 				depends on EXT4_FS
+		comments "CD-ROM/DVD"
+		config ISO9660_FS
+			tristate "ISO 9660 CDROM file system support"
+			default m
+		if ISO9660_FS
+			config JOLIET
+				bool "Microsoft Joliet CDROM extensions"
+				default y
+				select NLS
+			config ZISOFS
+				bool "Transparent decompression extension"
+				default y
+		endif
+		config UDF_FS
+			tristate "UDF file system support"
+			default m
+			select NLS
 	endmenu
 endif #BLOCK
 	
