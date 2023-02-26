@@ -1,4 +1,4 @@
-menu "minimal"
+menu "COMMON: usable"
 
 config PROC_FS
 	bool "PROC_FS"
