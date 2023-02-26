@@ -65,7 +65,7 @@ if BLOCK
 				default y
 				depends on EXT4_FS
 
-		comment "CD-ROM/DVD"
+		comment "[ CD-ROM/DVD ]"
 		config ISO9660_FS
 			tristate "ISO 9660 CDROM file system support"
 			default m
@@ -83,7 +83,7 @@ if BLOCK
 			default m
 			select NLS
 
-		comment "Windows FATs"
+		comment "[ Windows FATs ]"
 		config VFAT_FS
 			tristate "VFAT (Windows-95) fs support"
 			default m
