@@ -15,7 +15,7 @@ config DEVTMPFS_MOUNT
 	default y
 	depends on DEVTMPFS
 
-comment "others"
+comment "[ others ]"
 	config BUG
 		bool "BUG"
 		default y
