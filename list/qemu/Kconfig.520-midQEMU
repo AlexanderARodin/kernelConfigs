@@ -123,7 +123,7 @@ if NETWORK_FILESYSTEMS
 		tristate "Plan 9 Resource Sharing Support (9P2000)"
 		default m
 		depends on INET && NET_9P
-end #NETWORK_FILESYSTEMS
+endif #NETWORK_FILESYSTEMS
 
 	
 menu "hardware RANDOM"
