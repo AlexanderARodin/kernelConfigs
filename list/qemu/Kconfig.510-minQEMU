@@ -1,6 +1,4 @@
-config FOR_QEMU_MINIMAL
-	bool "minimal"
-if FOR_QEMU_MINIMAL
+
 	menu "CPU"
 		comment "< Intel 06/9e (family: 0x6, model: 0x9e, stepping: 0xd) >"
 		config SMP
@@ -136,4 +134,3 @@ if FOR_QEMU_MINIMAL
 			bool "INPUT_TABLET"
 			default y
 	endmenu
-endif #FOR_QEMU_MINIMAL
