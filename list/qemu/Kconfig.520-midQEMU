@@ -53,6 +53,16 @@ if BLOCK
 	endmenu # discs
 	
 	menu "block FS"
+		config EXT2_FS
+			tristate "Second extended fs support"
+			default y
+		config EXT4_FS
+			tristate "The Extended 4 (ext4) filesystem"
+			default m
+			config EXT4_FS_POSIX_ACL
+				bool "Ext4 POSIX Access Control Lists"
+				default y
+				depends on EXT4_FS
 	endmenu
 endif #BLOCK
 	
