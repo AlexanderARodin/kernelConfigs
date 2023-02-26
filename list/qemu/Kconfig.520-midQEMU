@@ -17,3 +17,4 @@ menu "NEXXX"
 			tristate "HW_RANDOM_VIA"
 			default y
 	endif
+endmenu
