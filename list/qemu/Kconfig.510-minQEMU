@@ -1,11 +1,11 @@
 menu "CPU"
 	menu "--- Intel 06/9e (family: 0x6, model: 0x9e, stepping: 0xd)"
 	endmenu
-	config X86_MPPARSE
-		bool "X86_MPPARSE"
 	config SMP
 		bool "SMP"
 		default y
+	config X86_MPPARSE
+		bool "Enable MPS table"
 	config NR_CPUS
 		int "max CPUs"
 		default 4
