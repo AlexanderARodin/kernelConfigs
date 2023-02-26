@@ -12,7 +12,7 @@ config ATA
 		config SATA_AHCI
 			tristate "SATA_AHCI"
 			default y
-			selects SCSI
+			select SCSI
 	endif #ATA
 	
 
