@@ -5,7 +5,7 @@ source "./list/Kconfig.000-overview"
 source "./list/Kconfig.100-minLoadable"
 source "./list/Kconfig.200-minUseful"
 
-comment "[ RECCOMENDS ]"
+#comment "[ RECCOMENDS ]"
 source "./list/Kconfig.500-for_qemu"
 
 
