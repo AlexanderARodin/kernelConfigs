@@ -1,12 +1,14 @@
-config LPC_ICH
-	tristate "Intel ICH LPC"
+config PCI
+	bool "pci"
 	default y
-	depends on PCI
-config I2C_I801
-	tristate "Intel 82801 (ICH/PCH)"
-	default y
-	depends on PCI
-
+if PCI
+	config LPC_ICH
+		tristate "Intel ICH LPC"
+		default y
+	config I2C_I801
+		tristate "Intel 82801 (ICH/PCH)"
+		default y
+endif #PCI
 
 config BLOCK
 	bool "Enable the BLOCK layer"
