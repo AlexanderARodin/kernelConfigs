@@ -53,16 +53,18 @@ if BLOCK
 	endmenu # discs
 	
 	menu "block FS"
+
 		config EXT2_FS
-			tristate "Second extended fs support"
+			tristate "Ext2 support"
 			default y
 		config EXT4_FS
-			tristate "The Extended 4 (ext4) filesystem"
+			tristate "Ext4 support"
 			default m
 			config EXT4_FS_POSIX_ACL
 				bool "Ext4 POSIX Access Control Lists"
 				default y
 				depends on EXT4_FS
+
 		comment "CD-ROM/DVD"
 		config ISO9660_FS
 			tristate "ISO 9660 CDROM file system support"
@@ -78,6 +80,23 @@ if BLOCK
 		endif
 		config UDF_FS
 			tristate "UDF file system support"
+			default m
+			select NLS
+
+		comment "Windows FATs"
+		config VFAT_FS
+			tristate "VFAT (Windows-95) fs support"
+			default m
+		if VFAT_FS
+			config FAT_DEFAULT_IOCHARSET
+				string ""
+				default "ascii"
+			config FAT_DEFAULT_UTF8
+			 bool "Enable FAT UTF-8 option by default"
+			 default y
+		endif
+		config EXFAT_FS
+			tristate "exFAT filesystem support"
 			default m
 			select NLS
 	endmenu
