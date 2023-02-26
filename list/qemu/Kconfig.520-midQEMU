@@ -131,7 +131,7 @@ endif #NETWORK_FILESYSTEMS
 
 menu "FS language support"
 	config NLS
-		bool ""
+		bool "Native language support"
 		default y
 	if NLS
 		config NLS_DEFAULT
