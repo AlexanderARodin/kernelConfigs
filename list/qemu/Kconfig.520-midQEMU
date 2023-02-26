@@ -1,41 +1,3 @@
-menu "Graphics"
-	config VGA_ARB
-		bool "VGA_ARB"
-		default n
-	config DRM
-		tristate "DRM"
-		default y
-	config DRM_BOCHS
-		tristate "DRM_BOCHS"
-		default y
-	config DUMMY_CONSOLE_COLUMNS
-		int "DUMMY_CONSOLE_COLUMNS"
-		default 128
-	config DUMMY_CONSOLE_ROWS
-		int "DUMMY_CONSOLE_ROWS"
-		default 48
-endmenu
-
-menu "hardware RANDOM"
-	config HW_RANDOM
-		tristate "HW_RANDOM"
-		default y
-	if HW_RANDOM
-		config HW_RANDOM_VIRTIO
-			tristate "HW_RANDOM_VIRTIO"
-			default y
-		config HW_RANDOM_INTEL
-			tristate "HW_RANDOM_INTEL"
-			default n
-		config HW_RANDOM_AMD
-			tristate "HW_RANDOM_AMD"
-			default n
-		config HW_RANDOM_VIA
-			tristate "HW_RANDOM_VIA"
-			default n
-	endif
-endmenu
-
 menuconfig BLOCK
 	bool "block"
 	default y
@@ -63,3 +25,42 @@ if BLOCK
 			depends on VIRTIO
 	endif #SCSI
 endif #BLOCK
+
+menu "hardware RANDOM"
+	config HW_RANDOM
+		tristate "HW_RANDOM"
+		default y
+	if HW_RANDOM
+		config HW_RANDOM_VIRTIO
+			tristate "HW_RANDOM_VIRTIO"
+			default y
+		config HW_RANDOM_INTEL
+			tristate "HW_RANDOM_INTEL"
+			default n
+		config HW_RANDOM_AMD
+			tristate "HW_RANDOM_AMD"
+			default n
+		config HW_RANDOM_VIA
+			tristate "HW_RANDOM_VIA"
+			default n
+	endif
+endmenu
+
+menu "Graphics"
+	config VGA_ARB
+		bool "VGA_ARB"
+		default n
+	config DRM
+		tristate "DRM"
+		default y
+	config DRM_BOCHS
+		tristate "DRM_BOCHS"
+		default y
+	config DUMMY_CONSOLE_COLUMNS
+		int "DUMMY_CONSOLE_COLUMNS"
+		default 128
+	config DUMMY_CONSOLE_ROWS
+		int "DUMMY_CONSOLE_ROWS"
+		default 48
+endmenu
+
