@@ -7,6 +7,10 @@ endmenu
 		int "max CPUs"
 		default 4
 		depends on SMP
+	config LEGACY_VSYSCALL_NONE
+		bool "legacy_vsyscall_none"
+		default y
+
 
 menu "BOARD & BUS"
 	config RTC_CLASS
