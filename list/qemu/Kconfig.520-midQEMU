@@ -1,80 +1,19 @@
 
-# NET append
--m inet_diag
--m inet_udp_diag
--m inet_raw_diag
--m vsockets
-
-# VIRTIO BLOCK
--e block
--e scsi
--e blk_dev_sd
--e blk_dev_sr
--e chr_dev_sg
--m scsi_VIRTIO
--m virtio_blk
-
-# SATA ISA SERIAL
--e lpc_ich
--e ata
--e sata_ahci
--e i2c_i801
-
-
-# file systems
--e unicode
--m cifs
--e cifs_xattr
--e cifs_posix
--e ext2_fs
--m ext4_fs
--e ext4_fs_posix_acl
--m iso9660_fs
--e joliet
--e zisofs
--m udf_fs
--m vfat_fs
---set-str fat_default_iocharset ascii
--e fat_default_utf8
--m exfat_fs
-
---set-str nls_default utf8
--m nls_utf8
--m nls_ascii
-
-
-
-# append VIRTIO
--e hw_random
--e hw_random_virtio
--d hw_random_intel
--d hw_random_amd
--d hw_random_via
-
--m VIRTIO_CONSOLE
--m virtio_input
-
-
-# Graphics
--d vga_arb
--e drm
--e drm_bochs
-
---set-val DUMMY_CONSOLE_COLUMNS 128
---set-val DUMMY_CONSOLE_ROWS 48
-#-e FB
-#-e FB_VGA16
-#-e FB_VESA
-#-e FRAMEBUFFER_CONSOLE
-#-e FRAMEBUFFER_CONSOLE_DETECT_PRIMARY
-#-e FRAMEBUFFER_CONSOLE_ROTATION
-
-
-# USB
-#-e USB_support
-#-e USB
-#-e USB_xhci_hcd
-
-
-# RETBleed: Warning...... leaks possible
-# --- pts??
+menu "NEXXX"
+	config HW_RANDOM
+		tristate "HW_RANDOM"
+		default y
+	if HW_RANDOM
+		config HW_RANDOM_VIRTIO
+			tristate "HW_RANDOM_VIRTIO"
+			default y
+		config HW_RANDOM_INTEL
+			tristate "HW_RANDOM_INTEL"
+			default y
+		config HW_RANDOM_AMD
+			tristate "HW_RANDOM_AMD"
+			default y
+		config HW_RANDOM_VIA
+			tristate "HW_RANDOM_VIA"
+			default y
+	endif
