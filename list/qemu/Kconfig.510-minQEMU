@@ -10,6 +10,24 @@ menu "CPU"
 		int "max CPUs"
 		default 4
 		depends on SMP
+		
+	menu "---- GUEST under HYPERVISOR"
+	endmenu
+	config HYPERVISOR_GUEST
+		bool "HYPERVISOR_GUEST"
+		default y
+	config PARAVIRT
+		bool "PARAVIRT"
+		default y
+	config PARAVIRT_SPINLOCKS
+		bool "PARAVIRT_SPINLOCKS"
+		default y
+	config PARAVIRT_TIME_ACCOUNTING
+		bool "PARAVIRT_TIME_ACCOUNTING"
+		default y
+
+	menu "---- others"
+	endmenu
 	config LEGACY_VSYSCALL_NONE
 		bool "legacy_vsyscall_none"
 		default y
@@ -50,21 +68,6 @@ menu "BOARD & BUS"
 		bool "VIRTIO_pci"
 		default y
 
-endmenu
-
-menu "GUEST under HYPERVISOR"
-	config HYPERVISOR_GUEST
-		bool "HYPERVISOR_GUEST"
-		default y
-	config PARAVIRT
-		bool "PARAVIRT"
-		default y
-	config PARAVIRT_SPINLOCKS
-		bool "PARAVIRT_SPINLOCKS"
-		default y
-	config PARAVIRT_TIME_ACCOUNTING
-		bool "PARAVIRT_TIME_ACCOUNTING"
-		default y
 endmenu
 
 menu "network"
