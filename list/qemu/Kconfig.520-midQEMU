@@ -36,3 +36,30 @@ menu "hardware RANDOM"
 	endif
 endmenu
 
+menuconfig BLOCK
+	bool "block"
+	default y
+if BLOCK
+	config SCSI
+		tristate "SCSI"
+		default y
+	if SCSI
+		config BLK_DEV_SD
+			tristate "BLK_DEV_SD"
+			default y
+		config BLK_DEV_SR
+			tristate "BLK_DEV_SR"
+			default y
+		config CHR_DEV_SG
+			bool "CHR_DEV_SG"
+			default y
+		config SCSI_VIRTIO
+			tristate "SCSI_VIRTIO"
+			default m
+			depends on VIRTIO
+		config VIRTIO_BLK
+			tristate "VIRTIO_BLK"
+			default m
+			depends on VIRTIO
+	endif #SCSI
+endif #BLOCK
