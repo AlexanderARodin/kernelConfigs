@@ -18,17 +18,15 @@ comment "[ kernel should speak ]"
 			bool "LEGACY_PTYS"
 	endif
 
-comment "[ ramdisk running ]"
 config BLK_DEV_INITRD
-	bool "support initrd"
+	bool "support INITRD"
 	default y
 
-comment "[ kernel should execute ]"
 config BINFMT_ELF
-	bool "run ELF"
+	bool "support exec ELF"
 	default y
 config BINFMT_SCRIPT
-	bool "run scripts '#!' like init"
+	bool "support exec scripts '#!' like init"
 	default y
 
 endmenu
