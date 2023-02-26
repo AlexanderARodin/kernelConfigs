@@ -101,6 +101,30 @@ if BLOCK
 			select NLS
 	endmenu
 endif #BLOCK
+
+
+menuconfig NETWORK_FILESYSTEMS
+	bool "Network File Systems"
+	default y
+	depends on NET
+if NETWORK_FILESYSTEMS
+	config CIFS
+		tristate "SMB3 and CIFS support (advanced network filesystem)"
+		default m
+	if CIFS
+		config CIFS_XATTR
+			bool "CIFS extended attributes"
+			default y
+		config CIFS_POSIX
+			bool "CIFS POSIX Extensions"
+			default y
+	endif #CIFS
+	config 9P_FS
+		tristate "Plan 9 Resource Sharing Support (9P2000)"
+		default m
+		depends on INET && NET_9P
+end #NETWORK_FILESYSTEMS
+
 	
 menu "hardware RANDOM"
 	config HW_RANDOM
