@@ -1,6 +1,7 @@
 
 menuconfig FOR_QEMU_GROUP
 	bool "for QEMU"
+	select FOR_QEMU_MINIMAL
 if FOR_QEMU_GROUP
 	source "./list/qemu/Kconfig.510-minQEMU"
 	comment " "
