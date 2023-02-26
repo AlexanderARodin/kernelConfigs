@@ -56,7 +56,6 @@ menu "BOARD & BUS"
 		bool "acpi_thermal"
 
 	comment "BUS"
-	endmenu
 	config PCI
 		bool "pci"
 		default y
@@ -66,7 +65,6 @@ menu "BOARD & BUS"
 	config VIRTIO_PCI
 		bool "VIRTIO_pci"
 		default y
-
 endmenu
 
 menu "network"
