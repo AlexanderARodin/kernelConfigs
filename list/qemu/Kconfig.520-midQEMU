@@ -1,7 +1,24 @@
-menuconfig BLOCK
-	bool "block"
+config BLOCK
+	bool "Enable the block layer"
 	default y
+
+
+
+config ATA
+		tristate "ATA"
+		default y
+		depends on BLOCK
+	if ATA
+		config SATA_AHCI
+			tristate "SATA_AHCI"
+			default y
+			selects SCSI
+	endif #ATA
+	
+
+
 if BLOCK
+	
 	config SCSI
 		tristate "SCSI"
 		default y
