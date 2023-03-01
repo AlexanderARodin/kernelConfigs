@@ -11,6 +11,6 @@ source "./list/Kconfig.500-for_qemu"
 
 comment "[ COMPILER ]"
 config WERROR
-	bool "treat WARNINGs as ERRORs"
+	bool "Compile the kernel with warnings as errors"
 	default y
 
