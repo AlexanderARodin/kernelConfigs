@@ -17,6 +17,10 @@ save-to-git:
 	@git push
 
 
+correct:
+	@cat ./.config
+
+
 clean:
 	@rm -vf ./.config ./.config.old
 
