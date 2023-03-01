@@ -1,6 +1,6 @@
 
 config DEFAULT_HOSTNAME
-	string "DEFAULT_HOSTNAME"
+	string "Default hostname"
 	default "raaNux"
 
 config 64BIT
