@@ -1,31 +1,31 @@
 menu "COMMON: usable"
 
 config PROC_FS
-	bool "PROC_FS"
+	bool "/proc file system support"
 	default y
 config SYSFS
-	bool "SYSFS"
+	bool "sysfs file system support"
 	default y
 
 config DEVTMPFS
-	bool "DEVTMPFS"
+	bool "Maintain a devtmpfs filesystem to mount at /dev"
 	default y
 config DEVTMPFS_MOUNT
-	bool "DEVTMPFS_MOUNT"
+	bool "Automount devtmpfs at /dev, after the kernel mounted the rootfs"
 	default y
 	depends on DEVTMPFS
 
 comment "[ others ]"
 	config BUG
-		bool "BUG"
+		bool "BUG() support"
 		default y
 
 	config SERIO_SERPORT
 		def_tristate m
-		prompt "SERIO_SERPORT"
+		prompt "Serial port line discipline"
 	config HID
 		def_tristate m
-		prompt "HID"
+		prompt "HID bus support"
 
 
 endmenu
