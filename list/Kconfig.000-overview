@@ -4,7 +4,7 @@ config DEFAULT_HOSTNAME
 	default "raaNux"
 
 config 64BIT
-	bool "64 bit"
+	bool "64-bit kernel"
 	default y
 
 menuconfig MODULES
