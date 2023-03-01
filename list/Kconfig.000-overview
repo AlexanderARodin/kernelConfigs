@@ -8,7 +8,7 @@ config 64BIT
 	default y
 
 menuconfig MODULES
-	bool "support MODULES"
+	bool "Enable loadable module support"
 	modules
 	default y
 
