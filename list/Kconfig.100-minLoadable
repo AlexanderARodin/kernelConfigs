@@ -24,10 +24,10 @@ config BLK_DEV_INITRD
 	default y
 
 config BINFMT_ELF
-	bool "support exec ELF"
+	bool "Kernel support for ELF binaries"
 	default y
 config BINFMT_SCRIPT
-	bool "support exec scripts '#!' like init"
+	bool "Kernel support for scripts starting with #!"
 	default y
 
 endmenu
