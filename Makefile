@@ -18,7 +18,7 @@ save-to-git:
 
 
 correct:
-	@cat ./.config | ./scripts/unsetToSetNO.sh
+	@cat ./.config | ./scripts/unsetToSetNO.sh > .config.clean
 
 
 clean:
