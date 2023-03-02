@@ -22,5 +22,5 @@ if MODULES
 			default y
 endif	#MODULES
 
-config EXPERT
-	def_bool y
+#config EXPERT
+#	def_bool y
