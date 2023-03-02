@@ -21,3 +21,6 @@ if MODULES
 			depends on MODULE_UNLOAD
 			default y
 endif	#MODULES
+
+config EMBEDDED
+	def_bool y
