@@ -80,8 +80,8 @@
 		config NETDEVICES
 			bool "NETDEVICES"
 			default y
-		config NETFAILOVER
-			bool "NETFAILOVER"
+		config NET_FAILOVER
+			tristate "Failover driver"
 			default y
 		config VIRTIO_NET
 			tristate "virtio-net"
@@ -92,8 +92,8 @@
 		config WLAN
 			bool "WLAN"
 			default n
-		config USB_NET_DRIVER
-			bool "USB_NET_DRIVER"
+		config USB_NET_DRIVERS
+			bool "USB Network Adapters"
 			default n
 		config ETHERNET
 			bool "ETHERNET"
@@ -123,8 +123,8 @@
 	endmenu
 	
 	menu "Input devices"
-		config INPUT_MOUSDEV
-			tristate "INPUT_MOUSDEV"
+		config INPUT_MOUSEDEV
+			tristate "Mouse interface"
 			default m
 		config MOUSE_PS2
 			tristate "MOUSE_PS2"
