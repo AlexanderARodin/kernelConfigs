@@ -59,8 +59,8 @@
 		config PCI
 			bool "pci"
 			default y
-		config VIRTION_MENU
-			bool "VIRTION_MENU"
+		config VIRTIO_MENU
+			bool "Virtio drivers"
 			default y
 		config VIRTIO_PCI
 			bool "VIRTIO_pci"
