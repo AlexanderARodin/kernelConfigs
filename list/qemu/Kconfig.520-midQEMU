@@ -136,7 +136,7 @@ menu "FS language support"
 	if NLS
 		config NLS_DEFAULT
 			string "Default NLS Option"
-			default "untf8"
+			default "utf8"
 		config NLS_ASCII
 			tristate "ASCII (United States)"
 			default m
