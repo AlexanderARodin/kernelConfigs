@@ -22,5 +22,5 @@ if MODULES
 			default y
 endif	#MODULES
 
-config EMBEDDED
+config EXTERT
 	def_bool y
