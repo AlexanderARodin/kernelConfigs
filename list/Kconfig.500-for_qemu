@@ -9,4 +9,7 @@ if FOR_QEMU_GROUP
 	menu "recommended"
 		source "./list/qemu/Kconfig.520-midQEMU"
 	endmenu
+	menu "extended"
+		source "./list/qemu/Kconfig.530-extQEMU"
+	endmenu
 endif
