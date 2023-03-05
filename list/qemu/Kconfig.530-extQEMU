@@ -1,0 +1,43 @@
+config MULTIUSER
+	bool "Multiple users, groups and capabilities support"
+	default y
+
+config VIRTIO_CONSOLE
+	tristate "Virtio console"
+	default m
+config VIRTIO_INPUT
+	tristate "Virtio input driver"
+	default m
+config VSOCKETS
+	tristate "Virtual Socket protocol"
+	default m
+
+config INET_DIAG
+	tristate "INET: socket monitoring interface"
+	default m
+if INET_DIAG
+	config INET_UDP_DIAG
+		tristate "UDP: socket monitoring interface"
+		default m
+	config INET_RAW_DIAG
+		tristate "RAW: socket monitoring interface"
+		default m
+endif #INET_DIAG
+
+
+
+config X86_MSR
+	tristate "/dev/cpu/*/msr - Model-specific register support"
+	default m
+config HALTPOLL_CPUIDLE
+	tristate "Halt poll cpuidle driver"
+	default m
+
+
+config CRYPTO_DEV_VIRTIO
+	tristate "VirtIO crypto driver"
+	default m
+
+
+
+
