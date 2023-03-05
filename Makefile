@@ -1,4 +1,7 @@
 
+help:
+	@echo 'OPTIONS: menuconfig edit see save-to-git correct clean'
+
 menuconfig:
 	@kconfig-mconf ./Kconfig
 
