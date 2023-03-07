@@ -25,6 +25,6 @@ correct:
 
 
 clean:
-	@rm -vf ./.config ./.config.old
+	@rm -vfR ./.config ./.config.old ./include/
 
 
