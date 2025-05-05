@@ -1,1 +1,5 @@
 /include/
+
+/.config
+/.config.old
+/.config.clean
