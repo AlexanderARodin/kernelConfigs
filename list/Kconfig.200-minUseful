@@ -20,6 +20,11 @@ comment "[ others ]"
 		bool "BUG() support"
 		default y
 
+config IA32_EMULATION
+	bool "needs for 32bit bin or Wine"
+#	default y
+	depends on 64BIT
+
 	config SERIO_SERPORT
 		def_tristate m
 		prompt "Serial port line discipline"

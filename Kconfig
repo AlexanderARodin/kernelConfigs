@@ -1,16 +1,21 @@
 mainmenu "AlexanderARodin meta-configurator for custom Linux Kernel"
 
-source "./list/Kconfig.000-overview"
+source "list/Kconfig.000-overview"
 
-source "./list/Kconfig.100-minLoadable"
-source "./list/Kconfig.200-minUseful"
+source "list/Kconfig.100-minLoadable"
+source "list/Kconfig.200-minUseful"
+
+source "list/Kconfig.250-StdRec"
 
 #comment "[ RECCOMENDS ]"
-source "./list/Kconfig.500-for_qemu"
+#source "list/Kconfig.500-for_qemu"
 
 
 comment "[ COMPILER ]"
 config WERROR
 	bool "Compile the kernel with warnings as errors"
 	default y
+config LOCALVERSION_AUTO
+	bool "LOCALVERSION_AUTO"
+	default n
 

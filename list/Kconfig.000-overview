@@ -1,4 +1,3 @@
-
 config DEFAULT_HOSTNAME
 	string "Default hostname"
 	default "raaNux"
@@ -7,9 +6,13 @@ config 64BIT
 	bool "64-bit kernel"
 	default y
 
+config EXPERT
+	bool "enable expert options"
+	default y
+
 menuconfig MODULES
 	bool "Enable loadable module support"
-	modules
+	option modules
 	default y
 
 if MODULES

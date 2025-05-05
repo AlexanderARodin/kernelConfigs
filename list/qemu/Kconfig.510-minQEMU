@@ -1,4 +1,3 @@
-
 	menu "CPU"
 		comment "< Intel 06/9e (family: 0x6, model: 0x9e, stepping: 0xd) >"
 		config SMP

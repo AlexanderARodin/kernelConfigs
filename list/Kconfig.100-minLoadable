@@ -1,5 +1,33 @@
 menu "COMMON: critical"
 
+comment "[ inird ]"
+	config BLK_DEV_INITRD
+		bool "support INITRD"
+		default y
+	if BLK_DEV_INITRD
+		config RD_GZIP
+			bool "gzip"
+			default y
+		config RD_BZIP2
+			bool "bzip2"
+			default n
+		config RD_LZMA
+			bool "LZMA"
+			default n
+		config RD_XZ
+			bool "XZ"
+			default n
+		config RD_LZ0
+			bool "LZ0"
+			default y
+		config RD_LZ4
+			bool "LZ4"
+			default n
+		config RD_ZSTD
+			bool "ZSTD"
+			default n
+	endif
+
 comment "[ kernel should speak ]"
 	config PRINTK
 		bool "PRINTK"
@@ -19,15 +47,12 @@ comment "[ kernel should speak ]"
 			bool "LEGACY_PTYS"
 	endif
 
-config BLK_DEV_INITRD
-	bool "support INITRD"
-	default y
-
-config BINFMT_ELF
-	bool "Kernel support for ELF binaries"
-	default y
-config BINFMT_SCRIPT
-	bool "Kernel support for scripts starting with #!"
-	default y
+comment "[ launcher ]"
+	config BINFMT_ELF
+		bool "Kernel support for ELF binaries"
+		default y
+	config BINFMT_SCRIPT
+		bool "Kernel support for scripts starting with #!"
+		default y
 
 endmenu

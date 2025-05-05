@@ -1,7 +1,5 @@
 #!/bin/sh
-#set -e
-
-
+set -e
 
 while IFS= read -r line; do
 	 lineWithConfig=$(echo $line | grep 'CONFIG_')
@@ -20,5 +18,3 @@ while IFS= read -r line; do
 		fi
 	 fi
 done
-
-

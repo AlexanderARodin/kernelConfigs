@@ -37,4 +37,3 @@ config X86_MSR
 config HALTPOLL_CPUIDLE
 	tristate "Halt poll cpuidle driver"
 	default m
-

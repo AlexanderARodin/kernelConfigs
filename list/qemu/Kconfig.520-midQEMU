@@ -1,4 +1,3 @@
-
 config PCI
 	bool "pci"
 	default y
@@ -186,4 +185,3 @@ menu "Graphics"
 		int "DUMMY_CONSOLE_ROWS"
 		default 48
 endmenu
-

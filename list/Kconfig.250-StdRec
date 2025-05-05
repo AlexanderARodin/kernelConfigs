@@ -1,0 +1,9 @@
+menu "Standard and Recommended"
+
+comment "[ General ]"
+	config BUG
+		bool "BUG() support"
+		default y
+
+
+endmenu
