@@ -2,23 +2,26 @@ help:
 	@echo 'OPTIONS: menuconfig edit see save-to-git correct clean'
 
 menuconfig:
-	@kconfig-mconf ./Kconfig
+	@[ -d target ] || mkdir target
+	@cd target && kconfig-mconf ../Kconfig
 
 dev:
 	@nvim ./Kconfig
 
 edit:
-	@nvim list/Kconfig.250-StdRec
+	@nvim scripts/unsetToSetNO.sh
 
 see:
 	@cat .config
 
 
 apply: correct
-	@cp -v .config.clean ../linux-6.14.2/.config
+	@cp -v target/linux-kernel/.config target/prev.config
+	@kconfig-merge -m target/prev.config target/.config.cor && mv -v .config target/new.config
+	@cp -v target/new.config target/linux-kernel/.config
 
 correct:
-	@cat .config | ./scripts/unsetToSetNO.sh > .config.clean
+	@cat target/.config | ./scripts/unsetToSetNO.sh > target/.config.cor
 
 
 clean:

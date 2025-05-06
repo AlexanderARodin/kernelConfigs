@@ -1,5 +1,6 @@
 /include/
 
-.config
-.config.old
-.config.clean
+# Ignore some dirs
+#
+debug/
+target/
