@@ -1,9 +1,45 @@
 menu "Standard and Recommended"
 
 comment "[ General ]"
+	config SMP
+		bool "Symmetric multi-processing support"
+		default y
+	config RELOCATABLE
+		bool "Recloable kernel"
+		default y
+	config MODIFY_LDT_SYSCLL
+		bool "Enable LDT (for 16-app or/and some Wine"
+		default n
+	config SYSVIPC
+		bool "System V IPC"
+		default y
+	config WATCH_QUEUE
+		bool "General notification queue"
+		default y
 	config BUG
 		bool "BUG() support"
 		default y
+	comment "[ Timers ]"
+		config NO_HZ_IDLE
+			bool "Idle dynticks (tickless idle)"
+			default y
+		config NO_HZ
+			bool "Old Idle dynticks config (for compat)"
+			default y
+		config HIGH_RES_TIMERS
+			bool "High Resolution Time Support"
+			default y
+	comment "[ BPF ]"
+		config BPF_SYSCALL
+			bool "Enable bpf() system call"
+			default y
+		config BPF_JIT
+			bool "BPF JIT"
+			default y
+	comment "[ Preemption model ]"
+		config PREEMPT
+			bool "Low-Latency Desktop or Embedded"
+			default y
 
 
 endmenu

@@ -7,13 +7,30 @@ source "../list/Kconfig.200-minUseful"
 
 source "../list/Kconfig.250-StdRec"
 
+source "../list/Kconfig.400-BlockAndFS"
+
 #comment "[ RECCOMENDS ]"
 #source "list/Kconfig.500-for_qemu"
 
 
-comment "[ COMPILER ]"
+comment "[ COMPILER etc ]"
 config WERROR
 	bool "Compile the kernel with warnings as errors"
+	default y
+config KALLSYMS
+	bool "Size but symbolic crash info"
+	default y
+config SYMBOLIC_ERRNAME
+	bool "Symbolic error names in printf"
+	default y
+config JUMP_LABEL
+	bool "Optimize very [un]likely branches (why not?)"
+	default y
+config SECCOMP
+	bool "to safely exec untrusted bytcode"
+	default y
+config STACKPROTECTOR
+	bool "STACKPROTECTOR"
 	default y
 config LOCALVERSION_AUTO
 	bool "LOCALVERSION_AUTO"

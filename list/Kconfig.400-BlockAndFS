@@ -1,0 +1,45 @@
+menuconfig BLOCK
+	bool "Enable the block layer and FS"
+	default y
+
+if BLOCK
+	config BLOCK_LEGACY_AUTOLOAD
+		bool "BLOCK_LEGACY_AUTOLOAD (OLD)"
+		default n
+	config MQ_IOSCHED_DEADLINE
+		tristate "MQ_IOSCHED_DEADLINE (if cgroups NOT"
+		default y
+	config MQ_IOSCHED_KYBER
+		tristate "Kyber I/O scheduler (probably NO)"
+		default n
+	config IOSCHED_BFQ
+		tristate "BFQ I/O scheduler (probably YES)"
+		default y
+
+	config BLK_DEV_LOOP
+		tristate "Loopback device support"
+		default m
+		config BLK_DEV_LOOP_MIN_COUNT
+			int "Number of pre-created at init time loop devs"
+			depends on BLK_DEV_LOOP
+			default 4
+	comment "[ File systems ]"
+		config VALIDATE_FS_PARSER
+			bool "VALIDATE_FS_PARSER (why not?)"
+			default y
+		config EXT4_FS
+			tristate "Ext4"
+			default m
+		config OVERLAY_FS
+			tristate "OVERLAY_FS"
+			default m
+		config MISC_FILESYSTEMS
+			bool "MISC_FILESYSTEMS"
+			default y
+		config SQUASHFS
+			tristate "SQUASHFS"
+			depends on MISC_FILESYSTEMS
+			default m
+
+endif	#BLOCK
+

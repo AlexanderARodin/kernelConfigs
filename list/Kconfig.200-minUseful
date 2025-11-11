@@ -16,8 +16,8 @@ config DEVTMPFS_MOUNT
 	depends on DEVTMPFS
 
 comment "[ others ]"
-	config BUG
-		bool "BUG() support"
+	config MULTIUSER
+		bool "Enable uid and gid supports not 0 (root) value"
 		default y
 
 config IA32_EMULATION
@@ -25,12 +25,12 @@ config IA32_EMULATION
 #	default y
 	depends on 64BIT
 
-	config SERIO_SERPORT
-		def_tristate m
-		prompt "Serial port line discipline"
-	config HID
-		def_tristate m
-		prompt "HID bus support"
+config SERIO_SERPORT
+	def_tristate m
+	prompt "Serial port line discipline"
+config HID
+	def_tristate m
+	prompt "HID bus support"
 
 
 endmenu

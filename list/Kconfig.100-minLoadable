@@ -4,48 +4,60 @@ comment "[ inird ]"
 	config BLK_DEV_INITRD
 		bool "support INITRD"
 		default y
-	if BLK_DEV_INITRD
 		config RD_GZIP
 			bool "gzip"
 			default y
+			depends on BLK_DEV_INITRD
 		config RD_BZIP2
 			bool "bzip2"
 			default n
+			depends on BLK_DEV_INITRD
 		config RD_LZMA
 			bool "LZMA"
 			default n
+			depends on BLK_DEV_INITRD
 		config RD_XZ
 			bool "XZ"
-			default n
+			default y
+			depends on BLK_DEV_INITRD
 		config RD_LZ0
 			bool "LZ0"
 			default y
+			depends on BLK_DEV_INITRD
 		config RD_LZ4
 			bool "LZ4"
 			default n
+			depends on BLK_DEV_INITRD
 		config RD_ZSTD
 			bool "ZSTD"
 			default n
-	endif
+			depends on BLK_DEV_INITRD
 
 comment "[ kernel should speak ]"
 	config PRINTK
 		bool "PRINTK"
 		default y
-	config PRINTK_TIME
-		bool "PRINTK_TIME"
-		default y
-		depends on PRINTK
+		config PRINTK_TIME
+			bool "PRINTK_TIME"
+			default y
+			depends on PRINTK
 	
+comment "[ where to speak ]"
 	config TTY
 		bool "TTY"
 		default y
-	if TTY
-		config UNIX98_PTYS
-			bool "UNIX98_PTYS"
-		config LEGACY_PTYS
-			bool "LEGACY_PTYS"
-	endif
+			config UNIX98_PTYS
+				bool "UNIX98_PTYS (required for '/dev/pts/' and '/dev/ptmx')"
+				default y
+				depends on TTY
+			config LEGACY_PTYS
+				bool "LEGACY_PTYS"
+				depends on TTY
+
+comment "[ keyboard ]"
+	config KEYBOARD_ATKBD
+		bool "AT keyboard (doesn't simple work as module)"
+		default y
 
 comment "[ launcher ]"
 	config BINFMT_ELF
