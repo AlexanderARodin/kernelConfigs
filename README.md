@@ -1,3 +1,5 @@
+TODO: needs to add EFI related options
+
 # kernelConfigs
 meta-configuration for linux-kernel configuration 
 
