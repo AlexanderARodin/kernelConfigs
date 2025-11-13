@@ -7,13 +7,16 @@ if BLOCK
 		bool "BLOCK_LEGACY_AUTOLOAD (OLD)"
 		default n
 	config MQ_IOSCHED_DEADLINE
-		tristate "MQ_IOSCHED_DEADLINE (if cgroups NOT"
+		tristate "MQ_IOSCHED_DEADLINE (if cgroups NOT)"
 		default y
 	config MQ_IOSCHED_KYBER
 		tristate "Kyber I/O scheduler (probably NO)"
 		default n
 	config IOSCHED_BFQ
 		tristate "BFQ I/O scheduler (probably YES)"
+		default y
+	config PARTITION_ADVANCED
+		bool "does nothing but opens options menu"
 		default y
 
 	config BLK_DEV_LOOP
@@ -30,6 +33,16 @@ if BLOCK
 		config EXT4_FS
 			tristate "Ext4"
 			default m
+			config EXT4_FS_SECURITY
+				bool "SELinux-like security labels (recommended)"
+				default y
+				depends on EXT4_FS
+		config FUSE_FS
+			tristate "FUSE_FS"
+			default m
+			config VIRTIO_FS
+				tristate "VIRTIO_FS: needs for sharing guest-host"
+				default n
 		config OVERLAY_FS
 			tristate "OVERLAY_FS"
 			default m
@@ -40,6 +53,33 @@ if BLOCK
 			tristate "SQUASHFS"
 			depends on MISC_FILESYSTEMS
 			default m
+
+	comment "[ PSEUDO file systems ]"
+		config TMPFS
+			bool "tmpfs"
+			default y
+			config TMPFS_XATTR
+				bool "XATTR (recommended)"
+				default y
+				depends on TMPFS
+		config EFIVAR_FS
+			tristate "EFI Variable FS"
+
+	comment "[ FS related functionality ]"
+		config INOTIFY_USER
+			bool "File&Dirs change notificator"
+			default y
+		config FANOTIFY
+			bool "Wide access notification (?)"
+			default y
+		config DNOTIFY
+			bool "Compatibility with some apps (old on-Dir-change)"
+			default y
+
+	comment "[ NLS ]"
+		config NLS_DEFAULT
+			string "NLS_DEFAULT: recommended utf8 but default iso8859-1"
+			default "utf8"
 
 endif	#BLOCK
 

@@ -15,6 +15,10 @@ config DEVTMPFS_MOUNT
 	default y
 	depends on DEVTMPFS
 
+config SHMEM
+	bool "backend for SWAP and TmpFS"
+	default y
+
 comment "[ others ]"
 	config MULTIUSER
 		bool "Enable uid and gid supports not 0 (root) value"

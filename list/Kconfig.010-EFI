@@ -1,0 +1,33 @@
+menuconfig EFI_RELATED
+	bool "EFI related"
+	default y
+
+if EFI_RELATED
+	config ACPI
+		bool "ACPI"
+		default y
+		config EFI
+			bool "EFI runtime service support"
+			default y
+			depends on ACPI
+			config EFI_STUB
+				bool "boot directly from EFI firmware without bootloader"
+				default y
+				depends on EFI
+			config EFIVAR_FS
+				tristate "EFI Variable FS"
+				default m
+				depends on EFI
+			config FB
+				tristate "Framebuffer support"
+				default y
+			config FB_EFI
+				bool "EFI-based Framebuffer support"
+				default y
+				depends on EFI
+				depends on FB
+	config EFI_PARTITION
+		bool "EFI GUID Partition support"
+		default y
+endif	#EFI_RELATED
+
