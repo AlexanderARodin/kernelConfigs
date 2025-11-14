@@ -1,33 +1,30 @@
-help:
-	@echo 'OPTIONS: menuconfig edit see save-to-git correct clean'
+CONFIG_LOCATION ?= target
 
 menu:
-	@[ -d target ] || mkdir target
-	@cd target && kconfig-mconf ../Kconfig
+	@mkdir -p $(CONFIG_LOCATION)
+	@KCONFIG_CONFIG="$(CONFIG_LOCATION)/source.config" kconfig-mconf Kconfig
+
+help:
+	@cat Makefile
 
 dev:
-	@nvim ./Kconfig
-
+	@nvim Kconfig
 edit:
 	@nvim list/Kconfig.500-VGUEST
 
-apply.to-tiny: tinyconfig.before.apply apply
 
-apply: correct
-	@cp -v target/linux-kernel/.config target/prev.config
-	@kconfig-merge -m target/prev.config target/.config.cor && mv -v .config target/new.config
-	@cp -v target/new.config target/linux-kernel/.config
-
-tinyconfig.before.apply:
-	@cd target/linux-kernel && make tinyconfig
+apply-to-tiny: correct
+	@KCONFIG_CONFIG="$(CONFIG_LOCATION)/result.config" \
+		kconfig-merge -m assets/tinykernel.config "$(CONFIG_LOCATION)/intermediate.config"
 
 correct:
-	@cat target/.config | scripts/unsetToSetNO.sh > target/.config.cor
+	@cat "$(CONFIG_LOCATION)/source.config" \
+		| scripts/unsetToSetNO.sh > "$(CONFIG_LOCATION)/intermediate.config"
 
 
 clean:
 	@rm -vfR include/
-	@cd target && rm -vfR .config .config.cor new.config prev.config
+	@rm -vfR target/
 
 
 savetogit:
