@@ -1,17 +1,17 @@
 mainmenu "AlexanderARodin meta-configurator for custom Linux Kernel"
 
 source "../list/Kconfig.000-overview"
-source "../list/Kconfig.010-EFI"
 
 source "../list/Kconfig.100-minLoadable"
 source "../list/Kconfig.200-minUseful"
 
 source "../list/Kconfig.250-StdRec"
 
+source "../list/Kconfig.300-EFI"
 source "../list/Kconfig.400-BlockAndFS"
 
-#comment "[ RECCOMENDS ]"
-#source "list/Kconfig.500-for_qemu"
+comment "[ OPTIONs ]"
+source "../list/Kconfig.500-VGUEST"
 
 
 comment "[ COMPILER etc ]"

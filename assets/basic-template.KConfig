@@ -70,6 +70,14 @@ config MAIN_OPT
 		default y
 
 
+menuconfig MODULES
+	bool "Enable loadable module support"
+	option modules
+	default y
+	help
+		tristate activator
+		..make it work!! finally
+
 menuconfig MODULES_ON
 	bool "modulator ON!!"
 	#modules

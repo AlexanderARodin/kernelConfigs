@@ -1,8 +1,5 @@
-menuconfig EFI_RELATED
-	bool "EFI related"
-	default y
+menu "EFI related"
 
-if EFI_RELATED
 	config ACPI
 		bool "ACPI"
 		default y
@@ -29,5 +26,5 @@ if EFI_RELATED
 	config EFI_PARTITION
 		bool "EFI GUID Partition support"
 		default y
-endif	#EFI_RELATED
 
+endmenu	#EFI_RELATED

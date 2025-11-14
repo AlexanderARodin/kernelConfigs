@@ -8,7 +8,7 @@ comment "[ General ]"
 		bool "Recloable kernel"
 		default y
 	config MODIFY_LDT_SYSCLL
-		bool "Enable LDT (for 16-app or/and some Wine"
+		bool "Enable LDT (for 16-app or/and some Wine)"
 		default n
 	config SYSVIPC
 		bool "System V IPC"

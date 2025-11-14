@@ -9,7 +9,7 @@ dev:
 	@nvim ./Kconfig
 
 edit:
-	@nvim list/Kconfig.400-BlockAndFS
+	@nvim list/Kconfig.500-VGUEST
 
 apply.to-tiny: tinyconfig.before.apply apply
 

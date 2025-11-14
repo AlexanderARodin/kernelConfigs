@@ -1,4 +1,3 @@
-
 config FOR_QEMU_GROUP
 	bool "for QEMU"
 	
