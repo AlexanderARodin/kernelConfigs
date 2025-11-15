@@ -1,8 +1,5 @@
+include .env
 CONFIG_LOCATION ?= target
-
-menu:
-	@mkdir -p $(CONFIG_LOCATION)
-	@KCONFIG_CONFIG="$(CONFIG_LOCATION)/source.config" kconfig-mconf Kconfig
 
 help:
 	@cat Makefile
@@ -11,6 +8,13 @@ dev:
 	@nvim Kconfig
 edit:
 	@nvim list/Kconfig.500-VGUEST
+
+configure: menu apply-to-tiny
+
+menu:
+	@mkdir -p $(CONFIG_LOCATION)
+	@echo [ CONFIG LOCATION: $(CONFIG_LOCATION) ]
+	@KCONFIG_CONFIG="$(CONFIG_LOCATION)/source.config" kconfig-mconf Kconfig
 
 
 apply-to-tiny: correct
