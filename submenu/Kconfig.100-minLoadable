@@ -1,6 +1,6 @@
 menu "COMMON: critical"
 
-comment "[ inird ]"
+comment "| inird |"
 	config BLK_DEV_INITRD
 		bool "support INITRD"
 		default y
@@ -33,7 +33,7 @@ comment "[ inird ]"
 			default n
 			depends on BLK_DEV_INITRD
 
-comment "[ kernel should speak ]"
+comment "| kernel should speak |"
 	config PRINTK
 		bool "PRINTK"
 		default y
@@ -42,7 +42,7 @@ comment "[ kernel should speak ]"
 			default y
 			depends on PRINTK
 	
-comment "[ where to speak ]"
+comment "| where to speak |"
 	config TTY
 		bool "TTY"
 		default y
@@ -54,12 +54,12 @@ comment "[ where to speak ]"
 				bool "LEGACY_PTYS"
 				depends on TTY
 
-comment "[ keyboard ]"
+comment "| keyboard |"
 	config KEYBOARD_ATKBD
 		bool "AT keyboard (doesn't simple work as module)"
 		default y
 
-comment "[ launcher ]"
+comment "| launcher |"
 	config BINFMT_ELF
 		bool "Kernel support for ELF binaries"
 		default y

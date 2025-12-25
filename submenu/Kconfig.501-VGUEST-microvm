@@ -1,0 +1,80 @@
+menuconfig MICROVM_HYPERVISOR_GUEST
+	bool "microvm VGUEST"
+	default n
+	select HYPERVISOR_GUEST
+	select VIRTIO_MMIO
+	select VIRTIO_MENU
+
+if MICROVM_HYPERVISOR_GUEST
+
+#	comment "| guesting itself |"
+#	config PARAVIRT
+#		bool "PARAVIRT: recommended (?)"
+#		default y
+#		depends on HYPERVISOR_GUEST
+
+	comment "| CRUCIAL (Y) |"
+		config VIRTIO_MENU
+			bool "VIRTIO_MENU: just opens menu"
+		config VIRTIO_MMIO
+			tristate "VIRTIO_MMIO"
+		config VIRTIO_MMIO_CMDLINE_DEVICES
+			bool "VIRTIO_MMIO_CMDLINE_DEVICES"
+			default y
+	
+	comment "| TERMINAL |"
+		config SERIAL_8250
+			tristate "SERIAL_8250 (for ttyS0)"
+			default y
+		config SERIAL_8250_CONSOLE
+			bool "SERIAL_8250_CONSOLE (for ttyS0)"
+			default y
+		config VIRTIO_CONSOLE
+			tristate "VIRTIO_CONSOLE (/dev/hvcX)"
+			default n
+
+	comment "| BLOCK Dev |"
+	config VIRTIO_BLK
+		tristate "VIRTIO_BLK"
+		default n
+
+	comment "| IMPORANT |"
+	config VIRTIO_IOMMU
+		tristate "VIRTIO_IOMMU"
+		default n
+	config VIRTIO_FS
+		tristate "VIRTIO_FS"
+		default y
+
+	comment "| NETWORK |"
+
+	comment "| UNUSED (N) |"
+		config VIRTIO_PCI
+			tristate "VIRTIO_PCI"
+			default n
+		config VIRTIO_INPUT
+			tristate "VIRTIO keyboards, mice & tablets"
+			default n
+		config INPUT_KEYBOARD
+			tristate "INPUT_KEYBOARD"
+			default n
+		config INPUT_MOUSE
+			tristate "INPUT_MOUSE"
+			default n
+		config SERIAL_8250_PCI
+			tristate "SERIAL_8250_PCI"
+			default n
+		config USB_SUPPORT
+			bool "USB"
+			default n
+		config PCI
+			bool "PCI"
+			default n
+		config SERIO_SERPORT
+			tristate "Serial port line discipline"
+			default n
+		config HID
+			tristate "HID bus support"
+			default n
+
+endif

@@ -1,0 +1,66 @@
+menuconfig HYPERVISOR_GUEST
+	bool "Running as Guest under Hypervisor"
+	default n
+
+if HYPERVISOR_GUEST
+
+	comment "| guesting itself |"
+	config PARAVIRT
+		bool "PARAVIRT: recommended (?)"
+		default y
+		depends on HYPERVISOR_GUEST
+
+	comment "| guesting drivers |"
+	config VIRTIO_MENU
+		bool "VIRTIO_MENU: just opens menu"
+		default y
+	config VIRTIO_INPUT
+		tristate "VIRTIO keyboards, mice & tablets"
+		default y
+	config VIRTIO_MMIO
+		tristate "VIRTIO_MMIO"
+		default y
+	config VIRTIO_IOMMU
+		tristate "VIRTIO_IOMMU"
+		default y
+	config VIRTIO_BLK
+		tristate "attach disks for microvm too"
+		default y
+	config VIRTIO_FS
+		tristate "VIRTIO_FS"
+		default y
+
+	comment "| 9p drivers |"
+	config NET
+		bool "NET (for 9p)"
+		default y
+	config NET_9P
+		tristate "NET_9P (share dirs)"
+		default m
+	config NET_9P_FD
+		tristate "NET_9P_FD"
+		default n
+		depends on NET_9P
+	config NET_9P_VIRTIO
+		tristate "NET_9P_VIRTIO"
+		default m
+		depends on NET_9P
+	config NET_9P_DEBUG
+		bool "NET_9P_DEBUG (for debuggin stage)"
+		default n
+		depends on NET_9P
+	config 9P_FS
+		tristate "9P_FS (share dirs)"
+		default m
+		depends on NET_9P
+	config 9P_FS_POSIX_ACL
+		bool "9P_FS_POSIX_ACL (?)"
+		default n
+	config PCI
+		tristate "PCI: seems to be needed (check?)"
+		default y
+	config VIRTIO_PCI
+		tristate "VIRTIO_PCI: seems to be needed (check?)"
+		default y
+
+endif

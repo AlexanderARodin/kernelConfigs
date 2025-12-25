@@ -1,6 +1,6 @@
 menu "Standard and Recommended"
 
-comment "[ General ]"
+comment "| General |"
 	config SMP
 		bool "Symmetric multi-processing support"
 		default y
@@ -16,10 +16,37 @@ comment "[ General ]"
 	config WATCH_QUEUE
 		bool "General notification queue"
 		default y
+	config EPOLL
+		bool "EPOLL (?)"
+		default y
 	config BUG
 		bool "BUG() support"
 		default y
-	comment "[ Timers ]"
+
+comment "| Drivers |"
+	config PCI
+		bool "PCI"
+		default y
+	config USB_SUPPORT
+		bool "USB support"
+		default y
+	config LEGACY_TIOCSTI
+		tristate "LEGACY_TIOCSTI"
+		default n
+	config SERIAL_8250
+		tristate "SERIAL_8250 (for ttyS0)"
+		default y
+	config SERIAL_8250_CONSOLE
+		bool "SERIAL_8250_CONSOLE (for ttyS0)"
+		default y
+	config SERIAL_8250_PCI
+		tristate "SERIAL_8250_PCI (?)"
+		default n
+	config SERIAL_8250_EXAR
+		tristate "SERIAL_8250_EXAR (seems N(?))"
+		default n
+
+comment "| Timers |"
 		config NO_HZ_IDLE
 			bool "Idle dynticks (tickless idle)"
 			default y
@@ -29,14 +56,14 @@ comment "[ General ]"
 		config HIGH_RES_TIMERS
 			bool "High Resolution Time Support"
 			default y
-	comment "[ BPF ]"
+	comment "| BPF |"
 		config BPF_SYSCALL
 			bool "Enable bpf() system call"
 			default y
 		config BPF_JIT
 			bool "BPF JIT"
 			default y
-	comment "[ Preemption model ]"
+	comment "| Preemption model |"
 		config PREEMPT
 			bool "Low-Latency Desktop or Embedded"
 			default y

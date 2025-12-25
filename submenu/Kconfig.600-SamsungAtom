@@ -1,0 +1,153 @@
+menuconfig SAMSUNG_ATOM
+	bool "SAMSUNG Atom"
+	default n
+
+if SAMSUNG_ATOM
+
+	comment "| General |"
+	config ACPI
+		bool "ACPI (poweroff etc)"
+		default y
+	config RTC_CLASS
+		bool "RTC_CLASS"
+		default y
+		config RTC_DRV_CMOS
+			tristate "RTC_DRV_CMOS"
+			default y
+			depends on RTC_CLASS
+	config PCI
+		bool "PCI"
+		default y
+		config PCIEPORTBUS
+			bool "PCIEPORTBUS"
+			default y
+			depends on PCI
+	config SCSI
+		tristate "SCSI"
+		default m
+	config ATA
+		tristate "ATA"
+		default m
+		config SATA_AHCI
+			tristate "SATA_AHCI"
+			default m
+			depends on ATA
+
+	comment "| USB |"
+	config USB_SUPPORT
+		bool "USB_SUPPORT"
+		default y
+		config USB_PCI
+			bool "USB_PCI"
+			default y
+			depends on USB_SUPPORT
+			depends on PCI
+		config USB
+			tristate "USB"
+			default m
+			depends on USB_SUPPORT
+			config USB_HUB_USB251XB
+				bool "USB_HUB_USB251XB: ?? hub ??"
+				default m
+				depends on USB
+			config USB_ANNOUNCE_NEW_DEVICES
+				bool "USB_ANNOUNCE_NEW_DEVICES"
+				default y
+
+			config USB_UHCI_HCD
+				tristate "USB_UHCI_HCD"
+				default m
+				depends on USB
+				depends on USB_PCI
+			config USB_EHCI_HCD
+				tristate "USB_EHCI_HCD"
+				default m
+				depends on USB
+
+			config USB_STORAGE
+				tristate "USB_STORAGE"
+				default m
+				depends on USB
+				depends on SCSI
+
+	comment "| Networking |"
+	config NET
+		bool "NET"
+		default y
+		config BT
+			tristate "Bluetooth"
+			default m
+			depends on NET
+			config BT_HCIBTUSB
+				tristate "BT_HCIBTUSB"
+				default m
+				depends on BT
+		config CFG80211
+			tristate "CFG80211"
+			default m
+			depends on NET
+			config MAC80211
+				tristate "MAC80211"
+				default m
+				depends on CFG80211
+
+	config CORDIC
+		tristate "CORDIC: fixed point alg"
+		default m
+	config FW_LOADER
+		tristate "FW_LOADER: firmware loader"
+		default m
+
+		config NETDEVICES
+			bool "NETDEVICES"
+			default y
+			depends on NET
+			config WLAN
+				bool "WLAN"
+				default y
+				depends on NETDEVICES
+				config BCMA
+					bool "BCMA"
+					default y
+					depends on WLAN
+				config BRCMSMAC
+					tristate "BRCMSMAC: WiFi"
+					default m
+					depends on WLAN
+
+			config SKY2
+				tristate "SKY2: ethernet"
+				default m
+				depends on NETDEVICES
+
+	comment "| Graphics |"
+		config FB
+			tristate "Framebuffer support (otherwise i915 shows black screen)"
+			default m
+		config DRM
+			tristate "DRM"
+			default m
+			config DRM_I915
+				tristate "DRM_I915"
+				default m
+				depends on DRM
+
+	comment "| Sound |"
+		config SOUND
+			tristate "SOUND"
+			default m
+			config SND
+				tristate "SND"
+				default m
+				depends on SOUND
+				config SND_HDA_INTEL
+					tristate "SND_HDA_INTEL"
+					default m
+					depends on SND
+
+	comment "| others |"
+		config I2C_I801
+			tristate "I2C_I801: SMBus (serial)"
+			default m
+
+endif #SAMSUNG_ATOM

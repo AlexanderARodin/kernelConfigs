@@ -2,7 +2,7 @@ config MULTIUSER
 	bool "Multiple users, groups and capabilities support"
 	default y
 
-comment "[ virtIO ]"
+comment "| virtIO |"
 config VIRTIO_CONSOLE
 	tristate "Virtio console"
 	default m
@@ -16,7 +16,7 @@ config VSOCKETS
 	tristate "Virtual Socket protocol"
 	default m
 
-comment "[ socket monitoring ]"
+comment "| socket monitoring |"
 config INET_DIAG
 	tristate "INET: socket monitoring interface"
 	default m
@@ -30,7 +30,7 @@ if INET_DIAG
 endif #INET_DIAG
 
 
-comment "[ CPU features ]"
+comment "| CPU features |"
 config X86_MSR
 	tristate "/dev/cpu/*/msr - Model-specific register support"
 	default m

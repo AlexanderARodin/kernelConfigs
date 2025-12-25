@@ -11,7 +11,11 @@ source "submenu/Kconfig.300-EFI"
 source "submenu/Kconfig.400-BlockAndFS"
 
 comment "| OPTIONs |"
-source "submenu/Kconfig.500-VGUEST"
+#source "submenu/Kconfig.500-VGUEST-common"
+source "submenu/Kconfig.501-VGUEST-microvm"
+
+comment "| PHYSICAL |"
+source "submenu/Kconfig.600-SamsungAtom"
 
 
 comment "| COMPILER etc |"
@@ -37,3 +41,13 @@ config LOCALVERSION_AUTO
 	bool "LOCALVERSION_AUTO"
 	default n
 
+comment "| DEBUG etc |"
+config EARLY_PRINTK
+	bool "early PRINTK (prob Y)"
+	default y
+config PANIC_ON_OOPS
+	bool "test with more attention for data corruption"
+	default n
+config PANIC_TIMEOUT;
+	int "timeout to reload after crush"
+	default 15

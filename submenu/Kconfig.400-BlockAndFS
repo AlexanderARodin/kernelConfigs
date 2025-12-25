@@ -26,16 +26,16 @@ if BLOCK
 			int "Number of pre-created at init time loop devs"
 			depends on BLK_DEV_LOOP
 			default 4
-	comment "[ File systems ]"
+	comment "| File systems |"
 		config VALIDATE_FS_PARSER
 			bool "VALIDATE_FS_PARSER (why not?)"
 			default y
 		config EXT4_FS
 			tristate "Ext4"
-			default m
+			default y
 			config EXT4_FS_SECURITY
-				bool "SELinux-like security labels (recommended)"
-				default y
+				bool "SELinux-like security labels (recommended?)"
+				default n
 				depends on EXT4_FS
 		config FUSE_FS
 			tristate "FUSE_FS"
@@ -54,7 +54,7 @@ if BLOCK
 			depends on MISC_FILESYSTEMS
 			default m
 
-	comment "[ PSEUDO file systems ]"
+	comment "| PSEUDO file systems |"
 		config TMPFS
 			bool "tmpfs"
 			default y
@@ -65,7 +65,7 @@ if BLOCK
 		config EFIVAR_FS
 			tristate "EFI Variable FS"
 
-	comment "[ FS related functionality ]"
+	comment "| FS related functionality |"
 		config INOTIFY_USER
 			bool "File&Dirs change notificator"
 			default y
@@ -76,7 +76,7 @@ if BLOCK
 			bool "Compatibility with some apps (old on-Dir-change)"
 			default y
 
-	comment "[ NLS ]"
+	comment "| NLS |"
 		config NLS_DEFAULT
 			string "NLS_DEFAULT: recommended utf8 but default iso8859-1"
 			default "utf8"

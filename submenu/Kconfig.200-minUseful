@@ -14,27 +14,38 @@ config DEVTMPFS_MOUNT
 	bool "Automount devtmpfs at /dev, after the kernel mounted the rootfs"
 	default y
 	depends on DEVTMPFS
+config DEVTMPFS_SAFE
+	bool "auto nosquid etc for mountin devtmpfs at /dev (may break non-KVS)"
+	default y
+	depends on DEVTMPFS
 
 config SHMEM
-	bool "backend for SWAP and TmpFS"
+	bool "backend for SWAP and TmpFS (maybe N for microvm)"
 	default y
 
-comment "[ others ]"
+comment "| others |"
 	config MULTIUSER
 		bool "Enable uid and gid supports not 0 (root) value"
 		default y
+	config POSIX_TIMERS
+		bool "POSIX_TIMERS (for ping etc)"
+		default y
+	config FUTEX
+		bool "FUTEX (for lshw)"
+		default y
 
 config IA32_EMULATION
-	bool "needs for 32bit bin or Wine"
-#	default y
+	bool "Y for for 32bit bin or Wine"
+	default n
 	depends on 64BIT
 
 config SERIO_SERPORT
-	def_tristate m
-	prompt "Serial port line discipline"
+	tristate "Serial port line discipline (?)"
+	default n
 config HID
-	def_tristate m
-	prompt "HID bus support"
+	tristate "HID bus support"
+	default n
+
 
 
 endmenu
